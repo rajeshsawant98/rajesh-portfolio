@@ -1,0 +1,36 @@
+import React from "react";
+import Image from "next/image";
+import { navLinks } from "@/constant/constant";
+import Link from "next/link";
+import { HiBars3BottomRight } from "react-icons/hi2";
+
+const Nav = () => {
+  return (
+    <div className="fixed h-[12vh] z-[10] w-full bg-blue-950">
+      <div className="text-white text-2xl font-bold flex items-center justify-between h-full w-[95%] sm:w-[90%] xl:w-[80%] mx-auto">
+        <Image
+          src="/images/logo.png"
+          alt="Logo"
+          width={170}
+          height={170}
+          className="ml-[-1.5rem] sm:ml-0"
+        />
+        <div className="flex items-center space-x-10">
+          <div className="hidden lg:flex items-center space-x-8">
+            {navLinks.map((link) => {
+              return (
+                <Link key={link.id} href={link.url}>
+                  <p className="nav_link">{link.label}</p>
+                </Link>
+              );
+            })}
+          </div>
+          {/* Hamburger menu for mobile view */}
+          <HiBars3BottomRight  className="w-8 h-8 cursor-pointer text-white lg:hidden"/>
+      </div>
+    </div>
+    </div>
+  );
+};
+
+export default Nav;
