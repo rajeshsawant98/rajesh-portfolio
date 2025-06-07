@@ -20,7 +20,7 @@ const MobileNav = ({ showNav, closeNav}: Props) => {
              {navLinks.map((link) => {
               return (
                 <Link key={link.id} href={link.url}>
-                  <p className="nav_link text-[20px] ml-12 border-b-[1.5px] pb-2 border-white sm:text-[30px]">{link.label}</p>
+                  <p className=" nav_link text-[20px] ml-12 border-b-[1.5px] pb-2 border-white sm:text-[30px] " >{link.label}</p>
                 </Link>
               );
             })}

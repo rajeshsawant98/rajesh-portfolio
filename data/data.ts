@@ -1,72 +1,68 @@
 export const BaseInfo = {
-  name: "Rajesh",
-  position: "Software Developer",
+  name: "Rajesh Sawant",
+  position: "Full-Stack Software Engineer",
   description:
-    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit porro numquam ad, vero consequuntur aperiam cumque voluptatum pariatur veniam? Qui facilis est ipsam odio cum!",
-  profilePic: "/images/hero.png",
+    "Master’s student in Software Engineering at ASU with a strong foundation in full-stack development, cloud computing, and semantic web technologies. Passionate about building meaningful products that connect people and ideas.",
+  profilePic: "/images/hero.png", // You can update this with your actual profile image path
 };
 
 export const aboutInfo = {
-  title: "Crafting Web Application with Passion and Precision",
+  title: "Empowering Digital Experiences through Engineering and Empathy",
   description:
-    "At webdev warriors, we’re a dedicated team of designers and developers committed to delivering tailored web solutions. With a blend of creativity and technical expertise, we help businesses elevate their online presence and achieve their goals",
-  client: "50+",
+    "I'm a former Mendix developer turned full-stack engineer, currently pursuing my master's at Arizona State University. With 3+ years of industry experience and a passion for problem-solving, I build scalable web apps that are both technically robust and user-friendly. My focus spans cloud platforms, semantic web, real-time systems, and human-centered design.",
+  client: "10+",
   experience: "3+",
-  project: "200+",
-  website: "100+",
+  project: "20+",
+  website: "10+",
 };
 
 export const servicesData = [
   {
     id: 1,
-    title: " Web Applications",
-    description: "Tailored web apps built with the latest technologies.",
+    title: "Custom Web Applications",
+    description: "React & FastAPI based applications with real-time features and authentication.",
     icon: "/images/s1.png",
   },
   {
     id: 2,
-    title: "E-commerce Websites",
-    description:
-      "Secure online stores with user-friendly shopping and payments.",
+    title: "Cloud & Firebase Solutions",
+    description: "Serverless architecture, Firestore, Firebase Storage, and Google Cloud integration.",
     icon: "/images/s2.png",
   },
   {
     id: 3,
-    title: "API Integration",
-    description:
-      "Seamless integration for smooth data sharing and functionality.",
+    title: "API Design & Integration",
+    description: "REST API development, integration with third-party services, and data pipelines.",
     icon: "/images/s3.png",
   },
   {
     id: 4,
-    title: "User Interfaces",
-    description:
-      "Engaging, responsive front-end designs for better user experiences.",
+    title: "Semantic Web Engineering",
+    description: "Ontology design, SPARQL querying, and intelligent knowledge graph applications.",
     icon: "/images/s4.png",
   },
   {
     id: 5,
-    title: "Database Solutions",
-    description:
-      "Efficient and scalable database management for your data needs.",
+    title: "Frontend UI/UX",
+    description: "MUI-based responsive and intuitive user interfaces with modern design principles.",
     icon: "/images/s5.png",
   },
   {
     id: 6,
-    title: "Real-Time Features",
-    description: "Add live chat, notifications, and real-time data updates.",
+    title: "Real-Time Event Platforms",
+    description: "Live RSVP, notifications, calendar sync, and interactive user experiences.",
     icon: "/images/s6.png",
   },
   {
     id: 7,
-    title: "Speed Optimization",
-    description: "Boost performance with faster load times and optimization.",
+    title: "Performance Optimization",
+    description: "Caching, lazy loading, and code splitting to improve speed and user engagement.",
     icon: "/images/s7.png",
   },
   {
     id: 8,
-    title: "Website Management",
-    description: "Easy content management systems with flexible controls.",
+    title: "Project Documentation & Training",
+    description: "Clear documentation and onboarding support for teams and clients.",
     icon: "/images/s8.png",
   },
 ];
@@ -75,166 +71,80 @@ export const projectData = [
   {
     id: 1,
     image: "/images/p1.png",
-    url: "https://agency-opal-eight.vercel.app/",
+    url: "https://github.com/rajeshsawant98/sahana-app",
   },
   {
     id: 2,
     image: "/images/p2.png",
-    url: "https://burger-pearl.vercel.app/",
+    url: "https://github.com/rajeshsawant98/kg-itp-travel-planner",
   },
   {
     id: 3,
     image: "/images/p3.png",
-    url: "https://game-ecommerce-yt.vercel.app/",
+    url: "https://github.com/rajeshsawant98/scrum-board-simulator",
   },
   {
     id: 4,
     image: "/images/p4.png",
-    url: "https://elearning-yt.vercel.app/",
-  },
-  {
-    id: 5,
-    image: "/images/p5.png",
-    url: "https://invest-peach.vercel.app/",
-  },
-  {
-    id: 6,
-    image: "/images/p6.png",
-    url: "https://job-chi-ruby.vercel.app/",
-  },
-  {
-    id: 7,
-    image: "/images/p7.png",
-    url: "https://wdw-ecom.vercel.app/",
-  },
-  {
-    id: 8,
-    image: "/images/p8.png",
-    url: "https://webhost-ten.vercel.app/",
+    url: "https://github.com/rajeshsawant98/mlang",
   },
 ];
 
 export const skillsData = [
-  {
-    id: 1,
-    title: "React",
-    image: "/images/react.svg",
-    percent: "90%",
-  },
-  {
-    id: 2,
-    title: "CSS",
-    image: "/images/css.svg",
-    percent: "97%",
-  },
-  {
-    id: 3,
-    title: "JavaScript",
-    image: "/images/js.svg",
-    percent: "77%",
-  },
-  {
-    id: 4,
-    title: "TypeScript",
-    image: "/images/ts.svg",
-    percent: "67%",
-  },
-  {
-    id: 5,
-    title: "HTML",
-    image: "/images/html.svg",
-    percent: "67%",
-  },
-  {
-    id: 6,
-    title: "Node JS",
-    image: "/images/node.svg",
-    percent: "77%",
-  },
-  {
-    id: 7,
-    title: "MongoDB",
-    image: "/images/mongo.svg",
-    percent: "65%",
-  },
-  {
-    id: 8,
-    title: "Python",
-    image: "/images/python.svg",
-    percent: "55%",
-  },
-  {
-    id: 9,
-    title: "Firebase",
-    image: "/images/firebase.svg",
-    percent: "75%",
-  },
-  {
-    id: 10,
-    title: "Vue",
-    image: "/images/vue.svg",
-    percent: "35%",
-  },
+  { id: 1, title: "React", image: "/images/react.svg", percent: "90%" },
+  { id: 2, title: "TypeScript", image: "/images/ts.svg", percent: "80%" },
+  { id: 3, title: "JavaScript", image: "/images/js.svg", percent: "85%" },
+  { id: 4, title: "FastAPI", image: "/images/python.svg", percent: "75%" },
+  { id: 5, title: "Firebase", image: "/images/firebase.svg", percent: "80%" },
+  { id: 6, title: "MongoDB", image: "/images/mongo.svg", percent: "70%" },
+  { id: 7, title: "Python", image: "/images/python.svg", percent: "70%" },
+  { id: 8, title: "HTML", image: "/images/html.svg", percent: "90%" },
+  { id: 9, title: "CSS", image: "/images/css.svg", percent: "90%" },
+  { id: 10, title: "Mendix", image: "/images/mendix.svg", percent: "85%" }, // You may need to add this image
 ];
 
 export const clientReviews = [
   {
-    name: "John Doe",
+    name: "Intelizign Team Lead",
     review:
-      "Exceptional service! The team delivered exactly what we needed on time. Very professional",
+      "Rajesh took initiative in training and onboarding, and demonstrated strong client communication skills while delivering Mendix apps efficiently.",
     rating: 5,
-    profession: "Marketing Manager",
+    profession: "Team Lead, Intelizign",
     image: "/images/u1.jpg",
   },
   {
-    name: "Jane Smith",
+    name: "Dr. Srividya Bansal",
     review:
-      "Highly skilled developers who understand the client's vision and execute perfectly.",
-    rating: 4.8,
-    profession: "Business Owner",
-    image: "/images/u2.jpg",
-  },
-  {
-    name: "Michael Johnson",
-    review:
-      "Great communication and excellent results. Our new site performs beautifully.",
-    rating: 4.6,
-    profession: "Project Coordinator",
-    image: "/images/u3.jpg",
-  },
-  {
-    name: "Emily Brown",
-    review:
-      "Professional, efficient, and highly knowledgeable. Would definitely recommend their services!",
+      "Rajesh impressed me with his creativity and technical acumen during the development of the KG-ITP system. A committed researcher and developer.",
     rating: 4.9,
-    profession: "Creative Director",
-    image: "/images/u4.jpg",
+    profession: "Associate Professor, ASU",
+    image: "/images/u2.jpg",
   },
 ];
 
 export const blogs = [
   {
     id: 1,
-    title: "Top Web Development Trends to Watch in 2024",
+    title: "Building Sahana: A Smart Event Platform with React and FastAPI",
     summary:
-      "Explore the key web development trends for 2024 and their impact on your business.",
-    date: "August 18, 2024",
+      "An inside look into designing and building Sahana, a real-time event networking app for students and communities.",
+    date: "June 1, 2025",
     image: "/images/b1.jpg",
   },
   {
     id: 2,
-    title: "Why Your Business Needs a Custom Web Application",
+    title: "From Mendix to Master’s: My Transition to Full-Stack Engineering",
     summary:
-      "Discover why custom web applications are crucial for driving business growth and efficiency.",
-    date: "August 10, 2024",
+      "Lessons learned moving from low-code enterprise apps to full-stack engineering with TypeScript and Python.",
+    date: "May 20, 2025",
     image: "/images/b2.jpg",
   },
   {
     id: 3,
-    title: "The Importance of Website Speed Optimization",
+    title: "Semantic Web and AI in Travel Planning: My COMPSAC 2025 Experience",
     summary:
-      "Understand how website speed impacts user experience and learn essential optimization tips.",
-    date: "July 25, 2024",
+      "How I built a knowledge graph-driven personalized travel planner and got accepted to COMPSAC 2025.",
+    date: "April 29, 2025",
     image: "/images/b3.jpg",
   },
 ];
