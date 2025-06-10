@@ -71,36 +71,40 @@ export const projectData = [
   {
     id: 1,
     image: "/images/p1.png",
-    url: "https://github.com/rajeshsawant98/sahana-app",
+    url: "https://sahana-drab.vercel.app/",
+    githubLink:"https://github.com/rajeshsawant98/sahana-backend"
   },
   {
     id: 2,
     image: "/images/p2.png",
     url: "https://github.com/rajeshsawant98/kg-itp-travel-planner",
+    githubLink:""
   },
   {
     id: 3,
     image: "/images/p3.png",
     url: "https://github.com/rajeshsawant98/scrum-board-simulator",
+    githubLink:""
   },
   {
     id: 4,
     image: "/images/p4.png",
-    url: "https://github.com/rajeshsawant98/mlang",
+    url: "https://github.com/ashuvenom/mlang",
+    githubLink:""
   },
 ];
 
 export const skillsData = [
-  { id: 1, title: "React", image: "/images/react.svg", percent: "90%" },
-  { id: 2, title: "TypeScript", image: "/images/ts.svg", percent: "80%" },
-  { id: 3, title: "JavaScript", image: "/images/js.svg", percent: "85%" },
-  { id: 4, title: "FastAPI", image: "/images/python.svg", percent: "75%" },
-  { id: 5, title: "Firebase", image: "/images/firebase.svg", percent: "80%" },
-  { id: 6, title: "MongoDB", image: "/images/mongo.svg", percent: "70%" },
-  { id: 7, title: "Python", image: "/images/python.svg", percent: "70%" },
-  { id: 8, title: "HTML", image: "/images/html.svg", percent: "90%" },
-  { id: 9, title: "CSS", image: "/images/css.svg", percent: "90%" },
-  { id: 10, title: "Mendix", image: "/images/mendix.svg", percent: "85%" }, // You may need to add this image
+  { id: 1, title: "React", image: "/images/skills/react.svg", percent: "90%" },
+  { id: 2, title: "TypeScript", image: "/images/skills/ts.svg", percent: "80%" },
+  { id: 3, title: "JavaScript", image: "/images/skills/js.svg", percent: "85%" },
+  { id: 4, title: "FastAPI", image: "/images/skills/fastapi.svg", percent: "75%" },
+  { id: 5, title: "Firebase", image: "/images/skills/firebase.svg", percent: "80%" },
+  { id: 6, title: "MongoDB", image: "/images/skills/mongo.svg", percent: "70%" },
+  { id: 7, title: "Python", image: "/images/skills/python.svg", percent: "70%" },
+  { id: 8, title: "HTML", image: "/images/skills/html.svg", percent: "90%" },
+  { id: 9, title: "CSS", image: "/images/skills/css.svg", percent: "90%" },
+  { id: 10, title: "Mendix", image: "/images/skills/mendix.svg", percent: "85%" }, 
 ];
 
 export const clientReviews = [
