@@ -13,4 +13,34 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
+
+  .custom-scrollbar::-webkit-scrollbar {
+    height: 10px;
+    width: 8px;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    background-color: #c277fa;
+    border-radius: 4px;
+  }
+  .custom-scrollbar::-webkit-scrollbar-track {
+    background-color: #44028f;
+  }
+}
+@layer utilities {
+  .scrollbar {
+    scrollbar-width: thin;
+    scrollbar-color: #c277fa #44028f;
+  }
+}
+@layer base {
+  body {
+    @apply bg-[#050715] text-white;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-bold text-white;
+  }
+  p {
+    @apply text-gray-300;
+  }
 }

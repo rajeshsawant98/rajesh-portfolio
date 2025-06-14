@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import ResponsiveNav from "@/components/Home/NavBar/ResponsiveNav";
+import ScrollToTop from "@/components/Helper/ScrollToTop";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -24,12 +25,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className="custom-scrollbar">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <ResponsiveNav />
         {children}
+        <ScrollToTop />
       </body>
     </html>
   );
