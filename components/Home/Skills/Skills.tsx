@@ -5,7 +5,7 @@ import SkillCard from "./SkillCard";
 
 const Skills = () => {
   return (
-    <div className="py-16 bg-[#050715]">
+    <div id="skills" className="py-16 bg-[#050715]">
       <SectionHeading>My Skills</SectionHeading>
       <div className="mt-20 w-[80%] mx-auto grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 xl:grid-cols-5 gap-4 items-center">
         {skillsData.map((skill, i) => {
