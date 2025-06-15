@@ -1,6 +1,6 @@
 import React from "react";
 import { navLinks } from "@/constant/constant";
-import Link from "next/link";
+//import Link from "next/link";
 import { CgClose } from "react-icons/cg";
 
 type Props = {
