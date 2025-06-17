@@ -30,14 +30,19 @@ const Hero = () => {
             >
               {BaseInfo.description}
             </p>
-            <button
-              data-aos="zoom-in"
-              data-aos-delay="300"
-              className=" md:px-8 md:py-2.5 px-6 py-1.5 text-white font-semibold text-sm md:text-lg transition-all duration-200 rounded-lg mt-8 bg-blue-700 hover:bg-blue-900 flex items-center space-x-2"
+            <a
+              href="/Rajesh_Sawant_Resume.pdf"
+              download
             >
-              <span> Download CV</span>
-              <FaDownload />
-            </button>
+              <button
+                data-aos="zoom-in"
+                data-aos-delay="300"
+                className=" md:px-8 md:py-2.5 px-6 py-1.5 text-white font-semibold text-sm md:text-lg transition-all duration-200 rounded-lg mt-8 bg-blue-700 hover:bg-blue-900 flex items-center space-x-2 cursor-pointer"
+              >
+                <span> Download CV</span>
+                <FaDownload />
+              </button>
+            </a>
           </div>
           <div className="mx-auto hidden lg:block overflow-x-hidden">
             <Image
