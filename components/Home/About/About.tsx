@@ -64,7 +64,7 @@ const About = () => {
               {aboutInfo.client}
             </p>
             <p className="text-base sm:text-lg text-gray-400 text-center">
-              Satisfied Customers
+              Satisfied Clients
             </p>
           </div>
             {/* 2nd Stat */}

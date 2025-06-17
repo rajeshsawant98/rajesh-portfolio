@@ -70,27 +70,43 @@ export const servicesData = [
 export const projectData = [
   {
     id: 1,
+    title: "Sahana – Smart Event Platform",
     image: "/images/p1.png",
     url: "https://sahana-drab.vercel.app/",
-    githubLink:"https://github.com/rajeshsawant98/sahana-backend"
+    githubLink: "https://github.com/rajeshsawant98/sahana-backend",
+    techStack: ["React", "FastAPI", "Firebase", "Google Cloud", "Redux Toolkit"],
+    description:
+      "A smart event and meetup platform with Google SSO, interest-based suggestions, RSVP tracking, and real-time notifications.",
   },
   {
     id: 2,
+    title: "KG-ITP – Intelligent Travel Planner",
     image: "/images/p2.png",
-    url: "https://github.com/rajeshsawant98/kg-itp-travel-planner",
-    githubLink:""
+    url: "https://github.com/rajeshsawant98/travel-path",
+    githubLink: "",
+    techStack: ["React", "FastAPI", "SPARQL", "Protégé", "Semantic Web"],
+    description:
+      "A knowledge graph-powered app that generates personalized travel plans based on user profile, location, and interests.",
   },
   {
     id: 3,
+    title: "Scrum Board Simulator",
     image: "/images/p3.png",
     url: "https://github.com/rajeshsawant98/scrum-board-simulator",
-    githubLink:""
+    githubLink: "",
+    techStack: ["Java", "AWT", "Swing", "Gradle"],
+    description:
+      "A desktop-based scrum board simulator for agile project management, featuring backlog management and burndown simulation.",
   },
   {
-    id: 4,
-    image: "/images/p4.png",
-    url: "https://github.com/ashuvenom/mlang",
-    githubLink:""
+  id: 4,
+  title: "Mlang – Cinematic Programming Language",
+  image: "/images/p4.png",
+  url: "https://github.com/ashuvenom/m-lang",
+  githubLink: "",
+  techStack: ["ANTLR", "Python", "Interpreter", "Custom Grammar"],
+    description:
+      "A domain-specific interpreted language designed with cinematic-style syntax and grammar.",
   },
 ];
 
