@@ -1,27 +1,20 @@
 import SectionHeading from "@/components/Helper/SectionHeading";
+import AnimateIn from "@/components/Helper/AnimateIn";
 import { skillsData } from "@/data/data";
-import React from "react";
 import SkillCard from "./SkillCard";
 
 const Skills = () => {
   return (
-    <div id="skills" className="py-16 bg-[#050715]">
+    <section id="skills" className="py-16 bg-primary-bg-alt">
       <SectionHeading>My Skills</SectionHeading>
       <div className="mt-20 w-[80%] mx-auto grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 xl:grid-cols-5 gap-4 items-center">
-        {skillsData.map((skill, i) => {
-          return (
-            <div
-              data-aos="flip-left"
-              data-aos-anchor-placement="top-center"
-              data-aos-delay={`${i * 150}`}
-              key={skill.id}
-            >
-              <SkillCard skill={skill}></SkillCard>
-            </div>
-          );
-        })}
+        {skillsData.map((skill, i) => (
+          <AnimateIn key={skill.id} animation="flip" delay={i * 0.1}>
+            <SkillCard skill={skill} />
+          </AnimateIn>
+        ))}
       </div>
-    </div>
+    </section>
   );
 };
 

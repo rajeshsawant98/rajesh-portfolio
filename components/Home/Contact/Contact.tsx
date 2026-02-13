@@ -1,25 +1,19 @@
-import React from "react";
+import AnimateIn from "@/components/Helper/AnimateIn";
 import ContactForm from "./ContactForm";
 import ContactInfo from "./ContactInfo";
+
 const Contact = () => {
   return (
-    <div id="contact" className="py-16 bg-[#050709]">
+    <section id="contact" className="py-16 bg-primary-bg">
       <div className="grid grid-cols-1 xl:grid-cols-2 w-[90%] sm:w-[80%] mx-auto items-center gap-10 mt-10">
-        {/* contact form */}
-        <div data-aos="fade-left" data-aos-anchor-placement="top-center">
+        <AnimateIn animation="fade" direction="left">
           <ContactForm />
-        </div>
-        {/* contact details */}
-        <div
-          data-aos="fade-right"
-          data-aos-anchor-placement="top-center"
-          data-aos-delay="100"
-          className="xl:mx-auto"
-        >
+        </AnimateIn>
+        <AnimateIn animation="fade" direction="right" delay={0.1} className="xl:mx-auto">
           <ContactInfo />
-        </div>
+        </AnimateIn>
       </div>
-    </div>
+    </section>
   );
 };
 
