@@ -14,23 +14,28 @@ const Hero = () => {
           <div>
             <AnimateIn animation="fade" direction="left">
               <h1 className="text-2xl md:text-3xl lg:text-4xl mb-2 text-gray-300 font-semibold">
-                I am {BaseInfo.name}
+                {BaseInfo.name}
               </h1>
             </AnimateIn>
             <AnimateIn animation="fade" direction="right" delay={0.1}>
-              <h1 className="text-bg text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7x1 font-bold md:leading-[3rem] lg:leading-[3.5rem] xl:leading-[4rem] text-white">
+              <h2 className="text-bg text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold md:leading-[3rem] lg:leading-[3.5rem] xl:leading-[4rem] text-white">
                 {BaseInfo.position}
-              </h1>
+              </h2>
             </AnimateIn>
-            <AnimateIn animation="fade" direction="left" delay={0.2}>
-              <p className="mt-4 text-sm md:text-base lg:text-2xl text-white opacity-60">
+            <AnimateIn animation="fade" direction="left" delay={0.15}>
+              <p className="mt-2 text-lg md:text-xl lg:text-2xl text-accent-purple-light font-medium">
+                {BaseInfo.tagline}
+              </p>
+            </AnimateIn>
+            <AnimateIn animation="fade" direction="left" delay={0.25}>
+              <p className="mt-6 text-sm md:text-base lg:text-lg text-gray-400 leading-relaxed max-w-xl">
                 {BaseInfo.description}
               </p>
             </AnimateIn>
-            <AnimateIn animation="zoom" delay={0.3}>
+            <AnimateIn animation="zoom" delay={0.35}>
               <a href="/Rajesh_Sawant_Resume.pdf" download>
                 <button className="md:px-8 md:py-2.5 px-6 py-1.5 text-white font-semibold text-sm md:text-lg transition-all duration-200 rounded-lg mt-8 bg-blue-700 hover:bg-blue-900 flex items-center space-x-2 cursor-pointer">
-                  <span>Download CV</span>
+                  <span>Download Resume</span>
                   <FaDownload />
                 </button>
               </a>

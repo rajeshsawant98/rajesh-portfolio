@@ -1,171 +1,285 @@
 export const BaseInfo = {
   name: "Rajesh Sawant",
-  position: "Full-Stack Software Engineer",
+
+  position: "Full-Stack Engineer",
+
+  tagline: "Building Intelligent Applications with AI & Structured Data",
+
+  roles: [
+    "AI-Powered Systems",
+    "Distributed Data Workflows",
+    "Knowledge-Driven Applications",
+  ],
+
   description:
-    "Master’s student in Software Engineering at ASU with a strong foundation in full-stack development, cloud computing, and semantic web technologies. Passionate about building meaningful products that connect people and ideas.",
-  profilePic: "/images/hero.png", // You can update this with your actual profile image path
+    "I design and build production-grade full-stack systems that integrate AI into real products. My work spans distributed data pipelines, knowledge graph applications, and modern React/Next.js frontends. Combining clean architecture with practical AI workflows. IEEE COMPSAC 2025 published author · MS Software Engineering, ASU.",
+  
+  profilePic: "/images/hero.png",
 };
 
 export const aboutInfo = {
-  title: "Empowering Digital Experiences through Engineering and Empathy",
+  title: "Engineering Scalable Systems Where AI Meets Real-World Data",
+
   description:
-    "I'm a former Mendix developer turned full-stack engineer, currently pursuing my master's at Arizona State University. With 3+ years of industry experience and a passion for problem-solving, I build scalable web apps that are both technically robust and user-friendly. My focus spans cloud platforms, semantic web, real-time systems, and human-centered design.",
-  client: "10+",
-  experience: "3+",
-  project: "20+",
-  website: "10+",
+    "I specialize in building end-to-end data-driven systems that integrate AI into production workflows. At ASU’s SUDOKN project, I designed a distributed ETL pipeline that transforms unstructured manufacturing data into structured, ontology-backed knowledge. The system combines AWS S3 storage, SQS queue orchestration, OpenAI Batch API extraction, and persistence across MongoDB and Ontotext GraphDB.",
+
+  highlights: [
+    "Designed distributed pipeline: S3 → SQS → LLM extraction → MongoDB & GraphDB",
+    "Built modern Next.js frontends with Mapbox, Zustand, and performance-focused state isolation",
+    "Developed async FastAPI backends with authentication, caching, and modular service layers",
+    "Published IEEE COMPSAC 2025 research on knowledge graph–driven personalization",
+  ],
 };
 
-export const servicesData = [
+export const experienceData = [
   {
     id: 1,
-    title: "Custom Web Applications",
-    description: "React & FastAPI based applications with real-time features and authentication.",
-    icon: "/images/s1.png",
+    role: "Graduate Service Assistant",
+    organization: "SUDOKN — Supply & Demand Open Knowledge Network",
+    location: "Arizona State University",
+    period: "Aug 2024 – Present",
+    highlights: [
+      "Architected AI-powered ETL pipeline: web scraping → S3 staging → SQS orchestration → OpenAI Batch API extraction → MongoDB + GraphDB persistence",
+      "Designed chain-of-responsibility pattern for multi-stage document processing with fault isolation and retry logic",
+      "Built ontology-backed extraction mapping raw LLM outputs to RDF/TTL triples with SPARQL validation against Ontotext GraphDB",
+      "Engineered Next.js + TypeScript frontend with Mapbox visualization, Zustand state management, virtualized lists, and incremental geospatial clustering",
+      "Implemented cost optimization strategies reducing OpenAI API spend through batching, caching, and concurrency control",
+    ],
   },
   {
     id: 2,
-    title: "Cloud & Firebase Solutions",
-    description: "Serverless architecture, Firestore, Firebase Storage, and Google Cloud integration.",
-    icon: "/images/s2.png",
+    role: "Teaching Assistant — AI for Software Engineers",
+    organization: "Arizona State University",
+    location: "Tempe, AZ",
+    period: "Jan 2025 – May 2025",
+    highlights: [
+      "Designed PCA tutorials and Random Forest grading pipelines for graduate-level AI coursework",
+      "Built nbgrader automation workflows for consistent, scalable assignment evaluation",
+      "Mentored 50+ graduate students on ML fundamentals, model evaluation, and applied AI concepts",
+    ],
   },
   {
     id: 3,
-    title: "API Design & Integration",
-    description: "REST API development, integration with third-party services, and data pipelines.",
-    icon: "/images/s3.png",
-  },
-  {
-    id: 4,
-    title: "Semantic Web Engineering",
-    description: "Ontology design, SPARQL querying, and intelligent knowledge graph applications.",
-    icon: "/images/s4.png",
-  },
-  {
-    id: 5,
-    title: "Frontend UI/UX",
-    description: "MUI-based responsive and intuitive user interfaces with modern design principles.",
-    icon: "/images/s5.png",
-  },
-  {
-    id: 6,
-    title: "Real-Time Event Platforms",
-    description: "Live RSVP, notifications, calendar sync, and interactive user experiences.",
-    icon: "/images/s6.png",
-  },
-  {
-    id: 7,
-    title: "Performance Optimization",
-    description: "Caching, lazy loading, and code splitting to improve speed and user engagement.",
-    icon: "/images/s7.png",
-  },
-  {
-    id: 8,
-    title: "Project Documentation & Training",
-    description: "Clear documentation and onboarding support for teams and clients.",
-    icon: "/images/s8.png",
+    role: "Software Engineer",
+    organization: "Intelizign Engineering Services",
+    location: "Pune, India",
+    period: "Aug 2021 – Jul 2023",
+    highlights: [
+      "Delivered enterprise Mendix applications for manufacturing clients, owning full development lifecycle from requirements to deployment",
+      "Led onboarding and training initiatives for new team members, establishing documentation standards",
+      "Integrated REST APIs and third-party services, building data pipelines between enterprise systems",
+    ],
   },
 ];
 
 export const projectData = [
   {
     id: 1,
-    title: "Sahana – Smart Event Platform",
+    title: "SUDOKN ",
+    subtitle: "Production AI Data Infrastructure",
+    image: "/images/p1.png",
+    url: "",
+    githubLink: "",
+    techStack: [
+      "AWS S3",
+      "AWS SQS",
+      "OpenAI Batch API",
+      "MongoDB",
+      "Ontotext GraphDB",
+      "RDF/TTL",
+      "SPARQL",
+      "Next.js",
+      "TypeScript",
+      "Zustand",
+      "Mapbox",
+    ],
+    description:
+      "Architected an end-to-end AI-powered ETL pipeline for the SUDOKN research project. The system ingests manufacturing capability data through web scraping, stages it in AWS S3, orchestrates processing via SQS queues, extracts structured data using OpenAI's Batch API with chain-of-responsibility patterns, maps outputs to RDF/TTL ontologies, and persists across MongoDB and Ontotext GraphDB with SPARQL validation.",
+    architecturePoints: [
+      "Web Scraping → AWS S3 staging",
+      "SQS queue orchestration with dead-letter handling",
+      "OpenAI Batch API with chain-of-responsibility extraction",
+      "RDF/TTL ontology mapping and validation",
+      "MongoDB + GraphDB dual persistence",
+      "Cost optimization via batching and concurrency control",
+    ],
+    featured: true,
+  },
+  {
+    id: 2,
+    title: "KG-ITP — Knowledge Graph Travel Planner",
+    subtitle: "IEEE COMPSAC 2025 — Full Paper Accepted",
+    image: "/images/p2.png",
+    url: "https://github.com/rajeshsawant98/travel-path",
+    githubLink: "https://github.com/rajeshsawant98/travel-path",
+    techStack: [
+      "React",
+      "FastAPI",
+      "SPARQL",
+      "GeoSPARQL",
+      "Protégé",
+      "RDF",
+      "Semantic Web",
+      "LLM",
+    ],
+    description:
+      "Built a knowledge graph-driven intelligent travel planner that generates personalized itineraries using SPARQL queries over custom ontologies, GeoSPARQL for spatial reasoning, and structured LLM output for natural language recommendations. Accepted as a full paper at IEEE COMPSAC 2025.",
+    architecturePoints: [
+      "Custom travel ontology designed in Protégé",
+      "SPARQL + GeoSPARQL for spatial query reasoning",
+      "Structured LLM output for personalized recommendations",
+      "User profile-based personalization logic",
+      "Evaluation metrics for recommendation quality",
+    ],
+    featured: true,
+  },
+  {
+    id: 3,
+    title: "Sahana — Real-Time Event Platform",
+    subtitle: "Full-Stack Production Application",
     image: "/images/p1.png",
     url: "https://sahana-drab.vercel.app/",
     githubLink: "https://github.com/rajeshsawant98/sahana-backend",
-    techStack: ["React", "FastAPI", "Firebase", "Google Cloud", "Redux Toolkit"],
+    techStack: [
+      "React",
+      "FastAPI",
+      "Firebase",
+      "Google SSO",
+      "Redux Toolkit",
+      "Google Maps API",
+    ],
     description:
-      "A smart event and meetup platform with Google SSO, interest-based suggestions, RSVP tracking, and real-time notifications.",
-  },
-  {
-    id: 2,
-    title: "KG-ITP – Intelligent Travel Planner",
-    image: "/images/p2.png",
-    url: "https://github.com/rajeshsawant98/travel-path",
-    githubLink: "",
-    techStack: ["React", "FastAPI", "SPARQL", "Protégé", "Semantic Web"],
-    description:
-      "A knowledge graph-powered app that generates personalized travel plans based on user profile, location, and interests.",
-  },
-  {
-    id: 3,
-    title: "Scrum Board Simulator",
-    image: "/images/p3.png",
-    url: "https://github.com/rajeshsawant98/scrum-board-simulator",
-    githubLink: "",
-    techStack: ["Java", "AWT", "Swing", "Gradle"],
-    description:
-      "A desktop-based scrum board simulator for agile project management, featuring backlog management and burndown simulation.",
-  },
-  {
-  id: 4,
-  title: "Mlang – Cinematic Programming Language",
-  image: "/images/p4.png",
-  url: "https://github.com/ashuvenom/m-lang",
-  githubLink: "",
-  techStack: ["ANTLR", "Python", "Interpreter", "Custom Grammar"],
-    description:
-      "A domain-specific interpreted language designed with cinematic-style syntax and grammar.",
+      "Designed and built a production event platform with Google SSO authentication via Firebase, async FastAPI backend, Redux Toolkit state management with caching strategies, real-time RSVP tracking, and Google Maps integration for location-based event discovery.",
+    architecturePoints: [
+      "Firebase Auth with Google SSO integration",
+      "Async FastAPI with structured error handling",
+      "Redux Toolkit with caching and optimistic updates",
+      "Google Maps API for geolocation features",
+      "Interest-based recommendation engine",
+    ],
+    featured: true,
   },
 ];
 
-export const skillsData = [
-  { id: 1, title: "React", image: "/images/skills/react.svg", percent: "90%" },
-  { id: 2, title: "TypeScript", image: "/images/skills/ts.svg", percent: "80%" },
-  { id: 3, title: "JavaScript", image: "/images/skills/js.svg", percent: "85%" },
-  { id: 4, title: "FastAPI", image: "/images/skills/fastapi.svg", percent: "75%" },
-  { id: 5, title: "Firebase", image: "/images/skills/firebase.svg", percent: "80%" },
-  { id: 6, title: "MongoDB", image: "/images/skills/mongo.svg", percent: "70%" },
-  { id: 7, title: "Python", image: "/images/skills/python.svg", percent: "70%" },
-  { id: 8, title: "HTML", image: "/images/skills/html.svg", percent: "90%" },
-  { id: 9, title: "CSS", image: "/images/skills/css.svg", percent: "90%" },
-  { id: 10, title: "Mendix", image: "/images/skills/mendix.svg", percent: "85%" }, 
-];
-
-export const clientReviews = [
+export const skillsGroups = [
   {
-    name: "Intelizign Team Lead",
-    review:
-      "Rajesh took initiative in training and onboarding, and demonstrated strong client communication skills while delivering Mendix apps efficiently.",
-    rating: 5,
-    profession: "Team Lead, Intelizign",
-    image: "/images/u1.jpg",
+    category: "Programming Languages",
+    skills: [
+      { name: "Java", icon: "/images/skills/java.svg" },
+      { name: "Python", icon: "/images/skills/python.svg" },
+      { name: "TypeScript", icon: "/images/skills/ts.svg" },
+      { name: "JavaScript", icon: "/images/skills/js.svg" },
+      { name: "SQL", icon: "/images/skills/postgresql.svg" },
+      { name: "MATLAB", icon: "/images/skills/matlab.svg" },
+    ],
   },
   {
-    name: "Dr. Srividya Bansal",
-    review:
-      "Rajesh impressed me with his creativity and technical acumen during the development of the KG-ITP system. A committed researcher and developer.",
-    rating: 4.9,
-    profession: "Associate Professor, ASU",
-    image: "/images/u2.jpg",
+    category: "Frontend",
+    skills: [
+      { name: "React", icon: "/images/skills/react.svg" },
+      { name: "Next.js", icon: "/images/skills/nextjs.svg" },
+      { name: "Redux Toolkit", icon: "/images/skills/redux.svg" },
+      { name: "Tailwind", icon: "/images/skills/tailwind.svg" },
+      { name: "Bootstrap", icon: "/images/skills/bootstrap.svg" },
+      { name: "HTML/CSS", icon: "/images/skills/html.svg" },
+    ],
+  },
+  {
+    category: "Backend & APIs",
+    skills: [
+      { name: "FastAPI", icon: "/images/skills/fastapi.svg" },
+      { name: "Node.js", icon: "/images/skills/node.svg" },
+      { name: "Spring Boot", icon: "/images/skills/spring.svg" },
+      { name: "Prisma", icon: "/images/skills/prisma.svg" },
+      { name: "Firebase", icon: "/images/skills/firebase.svg" },
+      { name: "n8n", icon: "/images/skills/n8n.svg" },
+    ],
+  },
+  {
+    category: "AI / ML",
+    skills: [
+      { name: "OpenAI", icon: "/images/skills/openai.svg" },
+      { name: "Jupyter", icon: "/images/skills/jupyter.svg" },
+      { name: "Pandas", icon: "/images/skills/pandas.svg" },
+      { name: "NumPy", icon: "/images/skills/numpy.svg" },
+      { name: "scikit-learn", icon: "/images/skills/scikitlearn.svg" },
+      { name: "MATLAB", icon: "/images/skills/matlab.svg" },
+    ],
+  },
+  {
+    category: "Databases",
+    skills: [
+      { name: "PostgreSQL", icon: "/images/skills/postgresql.svg" },
+      { name: "MongoDB", icon: "/images/skills/mongo.svg" },
+      { name: "MySQL", icon: "/images/skills/mysql.svg" },
+      { name: "DynamoDB", icon: "/images/skills/dynamodb.svg" },
+      { name: "Neo4j", icon: "/images/skills/neo4j.svg" },
+      { name: "Firestore", icon: "/images/skills/firebase.svg" },
+    ],
+  },
+  {
+    category: "Cloud",
+    skills: [
+      { name: "AWS", icon: "/images/skills/aws.svg" },
+      { name: "Google Cloud", icon: "/images/skills/googlecloud.svg" },
+      { name: "Azure", icon: "/images/skills/azure.svg" },
+      { name: "Docker", icon: "/images/skills/docker.svg" },
+      { name: "Kubernetes", icon: "/images/skills/kubernetes.svg" },
+      { name: "Terraform", icon: "/images/skills/terraform.svg" },
+    ],
+  },
+  {
+    category: "DevOps & Tools",
+    skills: [
+      { name: "Git", icon: "/images/skills/git.svg" },
+      { name: "GitHub Actions", icon: "/images/skills/github.svg" },
+      { name: "Postman", icon: "/images/skills/postman.svg" },
+      { name: "Figma", icon: "/images/skills/figma.svg" },
+      { name: "Jira", icon: "/images/skills/jira.svg" },
+      { name: "Vercel", icon: "/images/skills/vercel.svg" },
+    ],
   },
 ];
 
-export const blogs = [
+export const researchData = [
   {
     id: 1,
-    title: "Building Sahana: A Smart Event Platform with React and FastAPI",
-    summary:
-      "An inside look into designing and building Sahana, a real-time event networking app for students and communities.",
-    date: "June 1, 2025",
-    image: "/images/b1.jpg",
+    title: "Knowledge Graph-Driven Intelligent Travel Planner",
+    venue: "IEEE COMPSAC 2025",
+    type: "Full Paper — Accepted",
+    description:
+      "Presented a novel approach to personalized travel planning using knowledge graphs, SPARQL reasoning, GeoSPARQL spatial queries, and structured LLM outputs for generating context-aware itineraries.",
+    topics: [
+      "Knowledge Graphs",
+      "SPARQL",
+      "GeoSPARQL",
+      "Semantic Web",
+      "LLM Integration",
+      "Personalization",
+    ],
+  },
+];
+
+export const architecturePhilosophy = [
+  {
+    title: "Separation of Concerns in AI Pipelines",
+    description:
+      "Each stage of my ETL pipelines — ingestion, extraction, transformation, persistence — operates as an isolated unit with clear contracts. This makes individual stages testable, replaceable, and independently scalable.",
   },
   {
-    id: 2,
-    title: "From Mendix to Master’s: My Transition to Full-Stack Engineering",
-    summary:
-      "Lessons learned moving from low-code enterprise apps to full-stack engineering with TypeScript and Python.",
-    date: "May 20, 2025",
-    image: "/images/b2.jpg",
+    title: "Chain-of-Responsibility for LLM Extraction",
+    description:
+      "Rather than monolithic prompts, I decompose extraction into chained handlers where each processor handles a specific concern. Failed extractions don't cascade — they route to fallback handlers with progressively simpler extraction strategies.",
   },
   {
-    id: 3,
-    title: "Semantic Web and AI in Travel Planning: My COMPSAC 2025 Experience",
-    summary:
-      "How I built a knowledge graph-driven personalized travel planner and got accepted to COMPSAC 2025.",
-    date: "April 29, 2025",
-    image: "/images/b3.jpg",
+    title: "Async I/O as a First Principle",
+    description:
+      "When your pipeline talks to S3, SQS, OpenAI, MongoDB, and GraphDB, synchronous I/O is a bottleneck by design. I build with async/await from the start — FastAPI, aiohttp, motor — so concurrency is a feature, not an afterthought.",
+  },
+  {
+    title: "State Isolation in React",
+    description:
+      "I use Zustand with atomic stores over monolithic Redux trees. Each domain — map state, filter state, entity state — gets its own store with its own selectors. This eliminates unnecessary re-renders and makes state transitions predictable across complex UIs.",
   },
 ];
 

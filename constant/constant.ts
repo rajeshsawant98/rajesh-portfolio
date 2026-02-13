@@ -6,21 +6,26 @@ export const navLinks = [
   },
   {
     id: 2,
-    url: "#about",
-    label: "About",
+    url: "#experience",
+    label: "Experience",
   },
   {
     id: 3,
-    url: "#skills",
-    label: "Skills",
-  },
-  {
-    id: 4,
     url: "#projects",
     label: "Projects",
   },
   {
+    id: 4,
+    url: "#skills",
+    label: "Skills",
+  },
+  {
     id: 5,
+    url: "#research",
+    label: "Research",
+  },
+  {
+    id: 6,
     url: "#contact",
     label: "Contact",
   },

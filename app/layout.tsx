@@ -15,8 +15,20 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Rajesh Sawant | Portfolio",
-  description: "A portfolio showcasing my skills and projects",
+  title: "Rajesh Sawant | AI Systems Engineer",
+  description:
+    "AI Systems Engineer specializing in knowledge graph architecture, LLM pipelines, and production data infrastructure. MS Software Engineering, ASU. Published at IEEE COMPSAC 2025.",
+  keywords: [
+    "AI Systems Engineer",
+    "Knowledge Graph",
+    "LLM Pipeline",
+    "ETL",
+    "Full-Stack Engineer",
+    "SPARQL",
+    "Next.js",
+    "React",
+    "TypeScript",
+  ],
 };
 
 export default function RootLayout({

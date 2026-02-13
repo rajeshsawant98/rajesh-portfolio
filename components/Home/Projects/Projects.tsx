@@ -1,52 +1,76 @@
 import SectionHeading from "@/components/Helper/SectionHeading";
 import AnimateIn from "@/components/Helper/AnimateIn";
 import { projectData } from "@/data/data";
-import Image from "next/image";
 import Link from "next/link";
+import { FaExternalLinkAlt, FaGithub } from "react-icons/fa";
 
 const Projects = () => {
   return (
     <section id="projects" className="py-16 bg-primary-bg">
-      <SectionHeading>My Projects</SectionHeading>
-      <div className="w-[80%] mx-auto mt-20 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 items-center">
+      <SectionHeading>Featured Projects</SectionHeading>
+      <div className="w-[80%] mx-auto mt-20 max-w-5xl space-y-16">
         {projectData.map((project, i) => (
-          <AnimateIn key={project.id} animation="fade" direction="up" delay={i * 0.15}>
-            <div className="relative group rounded-lg overflow-hidden bg-blue-950 hover:scale-105 transition-transform duration-300">
-              <Link
-                href={project.url}
-                target="_blank"
-                className="block w-full h-full"
-              >
-                <Image
-                  src={project.image}
-                  alt={project.title}
-                  width={300}
-                  height={200}
-                  className="w-full h-60 object-cover"
-                  sizes="(max-width: 768px) 90vw, (max-width: 1024px) 45vw, 30vw"
-                />
-
-                <div className="absolute bottom-0 left-0 w-full h-60 bg-gradient-to-t from-black to-transparent px-4 py-3 text-white z-10 flex items-end">
-                  <h3 className="text-lg font-semibold mb-7 px-1">{project.title}</h3>
+          <AnimateIn key={project.id} animation="fade" direction="up" delay={i * 0.1}>
+            <div className="bg-card-dark rounded-xl p-6 md:p-8 border border-gray-800 hover:border-gray-700 transition-colors duration-300">
+              <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-2 mb-4">
+                <div>
+                  <h3 className="text-xl md:text-2xl font-bold text-white">
+                    {project.title}
+                  </h3>
+                  <p className="text-accent-purple-light text-sm md:text-base font-medium mt-1">
+                    {project.subtitle}
+                  </p>
                 </div>
+                <div className="flex items-center gap-3 flex-shrink-0">
+                  {project.url && (
+                    <Link
+                      href={project.url}
+                      target="_blank"
+                      className="text-gray-400 hover:text-white transition-colors"
+                    >
+                      <FaExternalLinkAlt className="text-lg" />
+                    </Link>
+                  )}
+                  {project.githubLink && (
+                    <Link
+                      href={project.githubLink}
+                      target="_blank"
+                      className="text-gray-400 hover:text-white transition-colors"
+                    >
+                      <FaGithub className="text-xl" />
+                    </Link>
+                  )}
+                </div>
+              </div>
 
-                <div className="absolute inset-0 bg-black/90 text-white opacity-0 group-hover:opacity-100 transition-all duration-300 p-4 flex flex-col justify-end z-20">
-                  <div>
-                    <h3 className="text-xl font-bold mb-2">{project.title}</h3>
-                    <p className="text-sm text-gray-300 mb-3">{project.description}</p>
-                    <div className="flex flex-wrap gap-2">
-                      {project.techStack.map((tech, index) => (
-                        <span
-                          key={index}
-                          className="bg-purple-700 text-xs px-2 py-1 rounded-full"
-                        >
-                          {tech}
-                        </span>
-                      ))}
+              <p className="text-gray-400 text-sm md:text-base leading-relaxed mb-6">
+                {project.description}
+              </p>
+
+              <div className="mb-6">
+                <h4 className="text-sm font-semibold text-gray-300 uppercase tracking-wider mb-3">
+                  Architecture
+                </h4>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
+                  {project.architecturePoints.map((point, j) => (
+                    <div key={j} className="flex items-start space-x-2">
+                      <span className="text-accent-purple-light mt-0.5 text-xs">&#9656;</span>
+                      <span className="text-gray-400 text-sm">{point}</span>
                     </div>
-                  </div>
+                  ))}
                 </div>
-              </Link>
+              </div>
+
+              <div className="flex flex-wrap gap-2">
+                {project.techStack.map((tech) => (
+                  <span
+                    key={tech}
+                    className="bg-gray-800 text-gray-300 text-xs px-3 py-1 rounded-full border border-gray-700"
+                  >
+                    {tech}
+                  </span>
+                ))}
+              </div>
             </div>
           </AnimateIn>
         ))}
