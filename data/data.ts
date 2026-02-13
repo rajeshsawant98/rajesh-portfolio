@@ -37,7 +37,7 @@ export const experienceData = [
     role: "Graduate Service Assistant",
     organization: "SUDOKN — Supply & Demand Open Knowledge Network",
     location: "Arizona State University",
-    period: "Aug 2024 – Present",
+    period: "June 2025 – Present",
     highlights: [
       "Architected AI-powered ETL pipeline: web scraping → S3 staging → SQS orchestration → OpenAI Batch API extraction → MongoDB + GraphDB persistence",
       "Designed chain-of-responsibility pattern for multi-stage document processing with fault isolation and retry logic",
@@ -51,11 +51,11 @@ export const experienceData = [
     role: "Teaching Assistant — AI for Software Engineers",
     organization: "Arizona State University",
     location: "Tempe, AZ",
-    period: "Jan 2025 – May 2025",
+    period: "Jan 2026 – May 2026",
     highlights: [
       "Designed PCA tutorials and Random Forest grading pipelines for graduate-level AI coursework",
       "Built nbgrader automation workflows for consistent, scalable assignment evaluation",
-      "Mentored 50+ graduate students on ML fundamentals, model evaluation, and applied AI concepts",
+      "Mentored 90+ graduate students on ML fundamentals, model evaluation, and applied AI concepts",
     ],
   },
   {
@@ -63,7 +63,7 @@ export const experienceData = [
     role: "Software Engineer",
     organization: "Intelizign Engineering Services",
     location: "Pune, India",
-    period: "Aug 2021 – Jul 2023",
+    period: "Aug 2021 – Jul 2024",
     highlights: [
       "Delivered enterprise Mendix applications for manufacturing clients, owning full development lifecycle from requirements to deployment",
       "Led onboarding and training initiatives for new team members, establishing documentation standards",
@@ -78,7 +78,7 @@ export const projectData = [
     title: "SUDOKN ",
     subtitle: "Production AI Data Infrastructure",
     image: "/images/p1.png",
-    url: "",
+    url: "https://www.sudokn.com",
     githubLink: "",
     techStack: [
       "AWS S3",
