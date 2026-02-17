@@ -13,7 +13,7 @@ const Hero = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 items-center gap-12">
           <div>
             <AnimateIn animation="fade" direction="left">
-              <h1 className="text-2xl md:text-3xl lg:text-4xl mb-2 text-gray-300 font-semibold">
+              <h1 className="text-2xl md:text-3xl lg:text-4xl mb-2 text-gray-700 dark:text-gray-300 font-semibold">
                 {BaseInfo.name}
               </h1>
             </AnimateIn>
@@ -28,7 +28,7 @@ const Hero = () => {
               </p>
             </AnimateIn>
             <AnimateIn animation="fade" direction="left" delay={0.25}>
-              <p className="mt-6 text-sm md:text-base lg:text-lg text-gray-400 leading-relaxed max-w-xl">
+              <p className="mt-6 text-sm md:text-base lg:text-lg text-gray-600 dark:text-gray-400 leading-relaxed max-w-xl">
                 {BaseInfo.description}
               </p>
             </AnimateIn>

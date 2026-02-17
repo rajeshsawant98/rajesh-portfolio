@@ -1,15 +1,37 @@
 @import "tailwindcss";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 @theme {
-  --color-primary-dark: #0f0715;
-  --color-primary-bg: #050709;
-  --color-primary-bg-alt: #050715;
-  --color-card-dark: #140c1c;
-  --color-nav-bg: #240b39;
+  --color-primary-dark: var(--theme-primary-dark);
+  --color-primary-bg: var(--theme-primary-bg);
+  --color-primary-bg-alt: var(--theme-primary-bg-alt);
+  --color-card-dark: var(--theme-card-dark);
+  --color-nav-bg: var(--theme-nav-bg);
   --color-accent-purple: #7947df;
   --color-accent-purple-hover: #5c2fb7;
-  --color-accent-purple-light: #c277fa;
+  --color-accent-purple-light: var(--theme-accent-purple-light);
   --color-accent-purple-gradient-start: #8050f7;
+}
+
+/* Light mode (default) */
+:root {
+  --theme-primary-dark: #f3eef8;
+  --theme-primary-bg: #ffffff;
+  --theme-primary-bg-alt: #f7f4fb;
+  --theme-card-dark: #efe8f8;
+  --theme-nav-bg: #ede5f7;
+  --theme-accent-purple-light: #7947df;
+}
+
+/* Dark mode */
+.dark {
+  --theme-primary-dark: #0f0715;
+  --theme-primary-bg: #050709;
+  --theme-primary-bg-alt: #050715;
+  --theme-card-dark: #140c1c;
+  --theme-nav-bg: #240b39;
+  --theme-accent-purple-light: #c277fa;
 }
 
 html {
@@ -19,21 +41,28 @@ html {
 
 @layer components {
   .nav_link {
-    @apply relative text-base font-medium w-fit block after:block after:content-[''] after:absolute after:h-[3px] after:bg-yellow-400 text-white after:w-full after:scale-x-0
+    @apply relative text-base font-medium w-fit block after:block after:content-[''] after:absolute after:h-[3px] after:bg-yellow-400 after:w-full after:scale-x-0
     hover:after:scale-x-100 after:transition after:duration-300 after:origin-left;
   }
 
   .text-bg {
-    background-image: linear-gradient(to right, var(--color-accent-purple-gradient-start) 0%, #ffffff 100%);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
 }
 
+.dark .text-bg {
+  background-image: linear-gradient(to right, var(--color-accent-purple-gradient-start) 0%, #ffffff 100%);
+}
+
+:root:not(.dark) .text-bg {
+  background-image: linear-gradient(to right, var(--color-accent-purple-gradient-start) 0%, #1a0533 100%);
+}
+
 @layer base {
   body {
-    @apply bg-primary-bg-alt text-white;
+    @apply bg-primary-bg-alt text-gray-900 dark:text-white;
     scrollbar-width: thin;
     scrollbar-color: var(--color-accent-purple-light) #44028f;
   }
@@ -53,10 +82,10 @@ html {
   }
 
   h1, h2, h3, h4, h5, h6 {
-    @apply font-bold text-white;
+    @apply font-bold text-gray-900 dark:text-white;
   }
 
   p {
-    @apply text-gray-300;
+    @apply text-gray-700 dark:text-gray-300;
   }
 }

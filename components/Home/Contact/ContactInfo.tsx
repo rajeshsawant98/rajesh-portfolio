@@ -16,8 +16,8 @@ const ContactInfo = () => {
             <item.icon className="text-2xl md:text-3xl text-white" />
           </div>
           <div>
-            <h3 className="text-white text-lg sm:text-xl font-bold">{item.label}</h3>
-            <p className="text-base sm:text-lg text-white opacity-70">{item.value}</p>
+            <h3 className="text-lg sm:text-xl font-bold">{item.label}</h3>
+            <p className="text-base sm:text-lg opacity-70">{item.value}</p>
           </div>
         </div>
       ))}

@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import ResponsiveNav from "@/components/Home/NavBar/ResponsiveNav";
 import ScrollToTop from "@/components/Helper/ScrollToTop";
+import ThemeProvider from "@/components/ThemeProvider";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -37,13 +38,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <ResponsiveNav />
-        {children}
-        <ScrollToTop />
+        <ThemeProvider>
+          <ResponsiveNav />
+          {children}
+          <ScrollToTop />
+        </ThemeProvider>
       </body>
     </html>
   );

@@ -16,7 +16,7 @@ const contactSchema = z.object({
 type ContactFormData = z.infer<typeof contactSchema>;
 
 const inputClasses =
-  "flex-1 bg-black text-white placeholder:text-gray-600 px-6 py-3 rounded-md border-[1.5px] border-gray-600/10 outline-none w-full focus:border-accent-purple transition-colors";
+  "flex-1 bg-gray-50 dark:bg-black text-gray-900 dark:text-white placeholder:text-gray-400 dark:placeholder:text-gray-600 px-6 py-3 rounded-md border-[1.5px] border-gray-200 dark:border-gray-600/10 outline-none w-full focus:border-accent-purple transition-colors";
 
 const ContactForm = () => {
   const [submitted, setSubmitted] = useState(false);
@@ -45,13 +45,13 @@ const ContactForm = () => {
       <h2 className="text-bg text-2xl md:text-3xl lg:text-[2.5rem] font-bold">
         Let&apos;s Connect
       </h2>
-      <p className="text-gray-200 mt-3 lg:text-base text-xs md:text-sm">
+      <p className="text-gray-600 dark:text-gray-200 mt-3 lg:text-base text-xs md:text-sm">
         Have a project in mind or just want to say hi? Fill out the form below
         and I&apos;ll get back to you as soon as possible.
       </p>
 
       {submitted && (
-        <div className="mt-4 p-3 bg-green-900/50 border border-green-500/30 rounded-md text-green-300 text-sm">
+        <div className="mt-4 p-3 bg-green-100 dark:bg-green-900/50 border border-green-300 dark:border-green-500/30 rounded-md text-green-700 dark:text-green-300 text-sm">
           Message prepared! Check your email client to send.
         </div>
       )}

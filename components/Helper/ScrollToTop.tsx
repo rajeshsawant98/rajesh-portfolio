@@ -32,7 +32,7 @@ const ScrollToTop = () => {
       {isVisible && (
         <a
           href="#home"
-          className="p-2 bg-blue-900 text-white rounded-full w-12 h-12 flex items-center justify-center shadow-lg hover:bg-blue-700 transition-colors duration-300"
+          className="p-2 bg-purple-200 dark:bg-blue-900 text-purple-800 dark:text-white rounded-full w-12 h-12 flex items-center justify-center shadow-lg hover:bg-purple-300 dark:hover:bg-blue-700 transition-colors duration-300"
         >
           <FaArrowUp />
         </a>

@@ -14,7 +14,7 @@ const About = () => {
           </h2>
         </AnimateIn>
         <AnimateIn animation="fade" direction="left" delay={0.1}>
-          <p className="mt-6 text-base md:text-lg text-gray-400 leading-relaxed">
+          <p className="mt-6 text-base md:text-lg text-gray-600 dark:text-gray-400 leading-relaxed">
             {aboutInfo.description}
           </p>
         </AnimateIn>
@@ -23,7 +23,7 @@ const About = () => {
             {aboutInfo.highlights.map((highlight, i) => (
               <div key={i} className="flex items-start space-x-3">
                 <FaArrowRight className="text-accent-purple-light mt-1.5 flex-shrink-0 text-sm" />
-                <p className="text-sm md:text-base text-gray-300 font-medium">
+                <p className="text-sm md:text-base text-gray-700 dark:text-gray-300 font-medium">
                   {highlight}
                 </p>
               </div>

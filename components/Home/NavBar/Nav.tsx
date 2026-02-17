@@ -4,6 +4,7 @@ import { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import { navLinks } from "@/constant/constant";
 import { HiBars3BottomRight } from "react-icons/hi2";
+import ThemeToggle from "./ThemeToggle";
 
 interface Props {
   openNav: () => void;
@@ -34,7 +35,7 @@ const Nav = ({ openNav }: Props) => {
           navBg ? "bg-nav-bg" : ""
         } h-[10vh] z-10 w-full transition-all duration-200`}
       >
-        <div className="text-white text-2xl font-bold flex items-center justify-between h-full w-[95%] sm:w-[90%] xl:w-[82.5%] mx-auto">
+        <div className="text-gray-900 dark:text-white text-2xl font-bold flex items-center justify-between h-full w-[95%] sm:w-[90%] xl:w-[82.5%] mx-auto">
           <a href="#home">
             <Image
               src="/images/logo.png"
@@ -57,9 +58,10 @@ const Nav = ({ openNav }: Props) => {
                 </a>
               ))}
             </div>
+            <ThemeToggle />
             <HiBars3BottomRight
               onClick={openNav}
-              className="w-8 h-8 cursor-pointer text-white lg:hidden"
+              className="w-8 h-8 cursor-pointer text-gray-900 dark:text-white lg:hidden"
             />
           </div>
         </div>

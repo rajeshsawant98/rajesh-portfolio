@@ -11,10 +11,10 @@ const Projects = () => {
       <div className="w-[80%] mx-auto mt-20 max-w-5xl space-y-16">
         {projectData.map((project, i) => (
           <AnimateIn key={project.id} animation="fade" direction="up" delay={i * 0.1}>
-            <div className="bg-card-dark rounded-xl p-6 md:p-8 border border-gray-800 hover:border-gray-700 transition-colors duration-300">
+            <div className="bg-card-dark rounded-xl p-6 md:p-8 border border-gray-200 dark:border-gray-800 hover:border-gray-300 dark:hover:border-gray-700 transition-colors duration-300">
               <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-2 mb-4">
                 <div>
-                  <h3 className="text-xl md:text-2xl font-bold text-white">
+                  <h3 className="text-xl md:text-2xl font-bold">
                     {project.title}
                   </h3>
                   <p className="text-accent-purple-light text-sm md:text-base font-medium mt-1">
@@ -26,7 +26,7 @@ const Projects = () => {
                     <Link
                       href={project.url}
                       target="_blank"
-                      className="text-gray-400 hover:text-white transition-colors"
+                      className="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors"
                     >
                       <FaExternalLinkAlt className="text-lg" />
                     </Link>
@@ -35,7 +35,7 @@ const Projects = () => {
                     <Link
                       href={project.githubLink}
                       target="_blank"
-                      className="text-gray-400 hover:text-white transition-colors"
+                      className="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors"
                     >
                       <FaGithub className="text-xl" />
                     </Link>
@@ -43,19 +43,19 @@ const Projects = () => {
                 </div>
               </div>
 
-              <p className="text-gray-400 text-sm md:text-base leading-relaxed mb-6">
+              <p className="text-gray-600 dark:text-gray-400 text-sm md:text-base leading-relaxed mb-6">
                 {project.description}
               </p>
 
               <div className="mb-6">
-                <h4 className="text-sm font-semibold text-gray-300 uppercase tracking-wider mb-3">
+                <h4 className="text-sm font-semibold text-gray-700 dark:text-gray-300 uppercase tracking-wider mb-3">
                   Architecture
                 </h4>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
                   {project.architecturePoints.map((point, j) => (
                     <div key={j} className="flex items-start space-x-2">
                       <span className="text-accent-purple-light mt-0.5 text-xs">&#9656;</span>
-                      <span className="text-gray-400 text-sm">{point}</span>
+                      <span className="text-gray-600 dark:text-gray-400 text-sm">{point}</span>
                     </div>
                   ))}
                 </div>
@@ -65,7 +65,7 @@ const Projects = () => {
                 {project.techStack.map((tech) => (
                   <span
                     key={tech}
-                    className="bg-gray-800 text-gray-300 text-xs px-3 py-1 rounded-full border border-gray-700"
+                    className="bg-purple-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 text-xs px-3 py-1 rounded-full border border-purple-200 dark:border-gray-700"
                   >
                     {tech}
                   </span>
