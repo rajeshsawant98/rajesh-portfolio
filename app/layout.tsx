@@ -4,6 +4,8 @@ import "./globals.css";
 import ResponsiveNav from "@/components/Home/NavBar/ResponsiveNav";
 import ScrollToTop from "@/components/Helper/ScrollToTop";
 import ThemeProvider from "@/components/ThemeProvider";
+import { GoogleAnalytics } from "@next/third-parties/google";
+import { Analytics } from "@vercel/analytics/next";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -47,7 +49,11 @@ export default function RootLayout({
           {children}
           <ScrollToTop />
         </ThemeProvider>
+        <Analytics />
       </body>
+      {process.env.NEXT_PUBLIC_GA_ID && (
+        <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_ID} />
+      )}
     </html>
   );
 }
