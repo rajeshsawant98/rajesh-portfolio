@@ -2,24 +2,18 @@
 
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { z } from "zod";
 import { useState } from "react";
 
-const contactSchema = z.object({
-  firstName: z.string().min(1, "First name is required"),
-  lastName: z.string().min(1, "Last name is required"),
-  email: z.string().email("Please enter a valid email"),
-  phone: z.string().optional(),
-  message: z.string().min(10, "Message must be at least 10 characters"),
-});
-
-type ContactFormData = z.infer<typeof contactSchema>;
+import { contactSchema, type ContactFormData } from "@/lib/contact-schema";
 
 const inputClasses =
   "flex-1 bg-gray-50 dark:bg-black text-gray-900 dark:text-white placeholder:text-gray-400 dark:placeholder:text-gray-600 px-6 py-3 rounded-md border-[1.5px] border-gray-200 dark:border-gray-600/10 outline-none w-full focus:border-accent-purple transition-colors";
 
 const ContactForm = () => {
-  const [submitted, setSubmitted] = useState(false);
+  const [submissionState, setSubmissionState] = useState<{
+    type: "success" | "error";
+    message: string;
+  } | null>(null);
 
   const {
     register,
@@ -31,13 +25,33 @@ const ContactForm = () => {
   });
 
   const onSubmit = async (data: ContactFormData) => {
-    const mailtoLink = `mailto:rajeshsawant98@gmail.com?subject=Portfolio Contact from ${data.firstName} ${data.lastName}&body=${encodeURIComponent(
-      `Name: ${data.firstName} ${data.lastName}\nEmail: ${data.email}\nPhone: ${data.phone || "N/A"}\n\n${data.message}`
-    )}`;
-    window.location.href = mailtoLink;
-    setSubmitted(true);
+    setSubmissionState(null);
+
+    const response = await fetch("/api/contact", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(data),
+    });
+
+    const payload = (await response.json().catch(() => null)) as
+      | { error?: string }
+      | null;
+
+    if (!response.ok) {
+      setSubmissionState({
+        type: "error",
+        message: payload?.error || "Unable to send your message right now. Please try again.",
+      });
+      return;
+    }
+
+    setSubmissionState({
+      type: "success",
+      message: "Message sent successfully. I’ll get back to you soon.",
+    });
     reset();
-    setTimeout(() => setSubmitted(false), 4000);
   };
 
   return (
@@ -50,9 +64,15 @@ const ContactForm = () => {
         and I&apos;ll get back to you as soon as possible.
       </p>
 
-      {submitted && (
-        <div className="mt-4 p-3 bg-green-100 dark:bg-green-900/50 border border-green-300 dark:border-green-500/30 rounded-md text-green-700 dark:text-green-300 text-sm">
-          Message prepared! Check your email client to send.
+      {submissionState && (
+        <div
+          className={`mt-4 p-3 rounded-md border text-sm ${
+            submissionState.type === "success"
+              ? "bg-green-100 dark:bg-green-900/50 border-green-300 dark:border-green-500/30 text-green-700 dark:text-green-300"
+              : "bg-red-100 dark:bg-red-900/50 border-red-300 dark:border-red-500/30 text-red-700 dark:text-red-300"
+          }`}
+        >
+          {submissionState.message}
         </div>
       )}
 

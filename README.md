@@ -2,6 +2,14 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 
 ## Getting Started
 
+Create your local environment file before starting the app:
+
+```bash
+cp .env.example .env.local
+```
+
+Set the SMTP values in `.env.local` so the contact form can send emails to `CONTACT_TO_EMAIL`.
+
 First, run the development server:
 
 ```bash
@@ -17,6 +25,27 @@ bun dev
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
 You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+
+## Contact Form Email Setup
+
+The `Send Message` button now posts to `/api/contact` and sends an email through SMTP.
+
+Required variables:
+
+```bash
+SMTP_HOST=
+SMTP_PORT=
+SMTP_USER=
+SMTP_PASS=
+CONTACT_FROM_EMAIL=
+CONTACT_TO_EMAIL=
+```
+
+Notes:
+
+- `CONTACT_TO_EMAIL` is the inbox that receives portfolio messages.
+- `CONTACT_FROM_EMAIL` must be an address your SMTP provider allows as the sender.
+- For Gmail, use an app password instead of your normal account password.
 
 This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
