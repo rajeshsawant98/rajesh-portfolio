@@ -53,9 +53,9 @@ export const experienceData = [
     location: "Tempe, AZ",
     period: "Jan 2026 – May 2026",
     highlights: [
-      "Designed PCA tutorials and Random Forest grading pipelines for graduate-level AI coursework",
-      "Built nbgrader automation workflows for consistent, scalable assignment evaluation",
-      "Mentored 90+ graduate students on ML fundamentals, model evaluation, and applied AI concepts",
+      "Built scalable nbgrader autograding pipelines with deterministic evaluation and hidden test cases",
+      "Designed and maintained assignments on machine learning and LLM workflows, including structured output evaluation",
+      "Mentored 90+ graduate students on model evaluation, generalization, and applied AI concepts",
     ],
   },
   {
