@@ -1,0 +1,24 @@
+# Rajesh Sawant Portfolio
+
+> Single-page portfolio for Rajesh Sawant, a Full-Stack Engineer focused on AI systems, knowledge graphs, production ETL, and modern Next.js applications.
+
+## Summary
+
+- Built with Next.js 15, React 19, TypeScript, Tailwind CSS 4, and Framer Motion.
+- Main sections: Hero, Experience, Projects, Skills, Research, and Contact.
+- Portfolio content lives in `data/data.ts`.
+- The contact form submits to `/api/contact`.
+
+## Useful URLs
+
+- `/`
+- `/Rajesh_Sawant_Resume.pdf`
+- `https://www.sudokn.com`
+- `https://github.com/rajeshsawant98/travel-path`
+- `https://sahana-drab.vercel.app/`
+- `https://github.com/rajeshsawant98/sahana-backend`
+
+## Contact
+
+- Email: rajeshsawant98@gmail.com
+- Location: Tempe, Arizona, USA
