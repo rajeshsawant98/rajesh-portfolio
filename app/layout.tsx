@@ -6,11 +6,9 @@ import ScrollToTop from "@/components/Helper/ScrollToTop";
 import ThemeProvider from "@/components/ThemeProvider";
 import { GoogleAnalytics } from "@next/third-parties/google";
 import { Analytics } from "@vercel/analytics/next";
+import { getSiteUrl } from "@/lib/site-url";
 
-const siteUrl =
-  process.env.NEXT_PUBLIC_SITE_URL ??
-  process.env.VERCEL_PROJECT_PRODUCTION_URL ??
-  "https://rajesh-portfolio-ten.vercel.app";
+const siteUrl = getSiteUrl();
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
