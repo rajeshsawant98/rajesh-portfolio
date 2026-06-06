@@ -1,9 +1,11 @@
 export const BaseInfo = {
   name: "Rajesh Sawant",
 
-  position: "Full-Stack Engineer",
+  position: "AI Systems Engineer",
 
-  tagline: "Building Intelligent Applications with AI & Structured Data",
+  tagline: "Building AI systems that ship to production",
+
+  availabilityBadge: "Available for opportunities",
 
   roles: [
     "AI-Powered Systems",
@@ -12,9 +14,17 @@ export const BaseInfo = {
   ],
 
   description:
-    "I design and build production-grade full-stack systems that integrate AI into real products. My work spans distributed data pipelines, knowledge graph applications, and modern React/Next.js frontends. Combining clean architecture with practical AI workflows. IEEE COMPSAC 2025 published author · MS Software Engineering, ASU.",
-  
-  profilePic: "/images/hero.png",
+    "I'm an AI Systems Engineer who bridges the gap between LLM capabilities and production data infrastructure — the part most engineers skip. My work spans distributed pipelines, knowledge graph architecture, and full-stack applications.",
+
+  profilePic: "/images/Hero.jpeg",
+
+  heroImages: [
+    "/images/stack/1.jpg",
+    "/images/stack/2.jpg",
+    "/images/stack/3.jpg",
+    "/images/stack/4.jpg",
+    "/images/stack/5.jpg",
+  ],
 };
 
 export const aboutInfo = {
@@ -34,40 +44,61 @@ export const aboutInfo = {
 export const experienceData = [
   {
     id: 1,
-    role: "Graduate Service Assistant",
-    organization: "SUDOKN — Supply & Demand Open Knowledge Network",
-    location: "Arizona State University",
-    period: "June 2025 – Present",
+    role: "Graduate Service Assistant — Software Developer",
+    organization: "Arizona State University · SUDOKN",
+    location: "Tempe, AZ",
+    period: "Jun 2025 – Present",
+    logo: "/images/orgs/asu.png",
+    initials: "ASU",
     highlights: [
-      "Architected AI-powered ETL pipeline: web scraping → S3 staging → SQS orchestration → OpenAI Batch API extraction → MongoDB + GraphDB persistence",
-      "Designed chain-of-responsibility pattern for multi-stage document processing with fault isolation and retry logic",
-      "Built ontology-backed extraction mapping raw LLM outputs to RDF/TTL triples with SPARQL validation against Ontotext GraphDB",
-      "Engineered Next.js + TypeScript frontend with Mapbox visualization, Zustand state management, virtualized lists, and incremental geospatial clustering",
-      "Implemented cost optimization strategies reducing OpenAI API spend through batching, caching, and concurrency control",
+      "Designed and owned scalable backend and frontend workflows for manufacturer onboarding using Next.js, TypeScript, Prisma, FastAPI, and MongoDB",
+      "Built a distributed, queue-driven ETL pipeline processing data from 40,000+ manufacturer websites using AWS SQS to decouple ingestion, extraction, and reconciliation stages",
+      "Implemented LLM-powered real-time and batch extraction workflows with async workers, retries, and controlled concurrency",
+      "Built responsive UI components with shadcn/ui and Tailwind CSS, reducing onboarding time and registration errors",
     ],
   },
   {
     id: 2,
-    role: "Teaching Assistant — AI for Software Engineers",
-    organization: "Arizona State University",
-    location: "Tempe, AZ",
-    period: "Jan 2026 – May 2026",
+    role: "Software Engineer",
+    organization: "Intelizign Lifecycle Services",
+    location: "Pune, India",
+    period: "Aug 2021 – Jul 2024",
+    logo: "/images/orgs/intelizign.png",
+    initials: "IL",
     highlights: [
-      "Built scalable nbgrader autograding pipelines with deterministic evaluation and hidden test cases",
-      "Designed and maintained assignments on machine learning and LLM workflows, including structured output evaluation",
-      "Mentored 90+ graduate students on model evaluation, generalization, and applied AI concepts",
+      "Designed and delivered enterprise web applications for manufacturing and automotive clients, reducing onboarding time by 30%",
+      "Developed data pipelines using REST APIs and service-oriented architecture across Mendix, Java services, and external systems, increasing operational efficiency by 30%",
+      "Built reusable React UI components and led UI/UX workshops and onboarding sessions for new team members",
+      "Led Agile execution contributing to sprint planning, code reviews, and CI/CD pipelines; deployed on AWS with Docker and Kubernetes",
+    ],
+  },
+];
+
+export const educationData = [
+  {
+    id: 1,
+    degree: "Master of Science — Computer Software Engineering",
+    institution: "Arizona State University",
+    location: "Tempe, AZ",
+    period: "Aug 2024 – May 2026",
+    logo: "/images/orgs/asu.png",
+    initials: "ASU",
+    highlights: [
+      "GPA: 3.76 / 4.0",
+      "Teaching Assistant — AI for Software Engineers (Spring 2026)",
+      "Published IEEE COMPSAC 2025 research on knowledge graph–driven personalization",
     ],
   },
   {
-    id: 3,
-    role: "Software Engineer",
-    organization: "Intelizign Engineering Services",
+    id: 2,
+    degree: "Bachelor of Engineering — Electronics & Telecommunications",
+    institution: "Savitribai Phule Pune University",
     location: "Pune, India",
-    period: "Aug 2021 – Jul 2024",
+    period: "Aug 2016 – Dec 2020",
+    logo: "/images/orgs/sppu.png",
+    initials: "SPPU",
     highlights: [
-      "Delivered enterprise Mendix applications for manufacturing clients, owning full development lifecycle from requirements to deployment",
-      "Led onboarding and training initiatives for new team members, establishing documentation standards",
-      "Integrated REST APIs and third-party services, building data pipelines between enterprise systems",
+      "Coursework in algorithms, operating systems, databases, and computer networks",
     ],
   },
 ];
@@ -75,9 +106,16 @@ export const experienceData = [
 export const projectData = [
   {
     id: 1,
-    title: "SUDOKN ",
+    title: "SUDOKN",
     subtitle: "Production AI Data Infrastructure",
-    image: "/images/p1.png",
+    badge: "PRODUCTION",
+    images: [
+      "/images/projects/sudokn/1.png",
+      "/images/projects/sudokn/2.png",
+      "/images/projects/sudokn/3.png",
+      "/images/projects/sudokn/4.png",
+      "/images/projects/sudokn/5.png",
+    ],
     url: "https://www.sudokn.com",
     githubLink: "",
     techStack: [
@@ -109,7 +147,13 @@ export const projectData = [
     id: 2,
     title: "KG-ITP — Knowledge Graph Travel Planner",
     subtitle: "IEEE COMPSAC 2025 — Full Paper Accepted",
-    image: "/images/p2.png",
+    badge: "IEEE COMPSAC 2025",
+    images: [
+      "/images/projects/kg-itp/1.jpeg",
+      "/images/projects/kg-itp/2.jpeg",
+      "/images/projects/kg-itp/3.jpeg",
+      "/images/projects/kg-itp/4.jpeg",
+    ],
     url: "https://github.com/rajeshsawant98/travel-path",
     githubLink: "https://github.com/rajeshsawant98/travel-path",
     techStack: [
@@ -137,7 +181,14 @@ export const projectData = [
     id: 3,
     title: "Sahana — Real-Time Event Platform",
     subtitle: "Full-Stack Production Application",
-    image: "/images/p1.png",
+    badge: "FULL-STACK",
+    images: [
+      "/images/projects/sahana/1.png",
+      "/images/projects/sahana/2.png",
+      "/images/projects/sahana/3.png",
+      "/images/projects/sahana/4.png",
+      "/images/projects/sahana/5.png",
+    ],
     url: "https://sahana-drab.vercel.app/",
     githubLink: "https://github.com/rajeshsawant98/sahana-backend",
     techStack: [

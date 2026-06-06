@@ -1,58 +1,85 @@
-import { BaseInfo } from "@/data/data";
-import { FaDownload } from "react-icons/fa";
-import Image from "next/image";
+import { BaseInfo, contactData } from "@/data/data";
+import { FaDownload, FaLinkedin, FaGithub, FaEnvelope } from "react-icons/fa";
 import AnimateIn from "@/components/Helper/AnimateIn";
+import HeroPhotoStack from "./HeroPhotoStack";
 
 const Hero = () => {
   return (
     <section
       id="home"
-      className="w-full pt-[4vh] md:pt-[12vh] h-screen bg-primary-dark overflow-hidden relative"
+      className="w-full min-h-[87vh] flex items-center bg-primary-dark overflow-hidden"
     >
-      <div className="flex justify-center flex-col w-4/5 h-full mx-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-2 items-center gap-12">
-          <div>
-            <AnimateIn animation="fade" direction="left">
-              <h1 className="text-2xl md:text-3xl lg:text-4xl mb-2 text-gray-700 dark:text-gray-300 font-semibold">
-                {BaseInfo.name}
+      <div className="w-[85%] max-w-5xl mx-auto py-16">
+        <div className="flex flex-col lg:flex-row items-start lg:items-center gap-12 lg:gap-20">
+
+          {/* Left: text */}
+          <div className="flex-1 min-w-0">
+            <AnimateIn animation="fade" direction="up">
+              <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold leading-[1.1] mb-4 text-gray-900 dark:text-white">
+                Hi, I&apos;m Rajesh.
               </h1>
             </AnimateIn>
-            <AnimateIn animation="fade" direction="right" delay={0.1}>
-              <h2 className="text-bg text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold md:leading-[3rem] lg:leading-[3.5rem] xl:leading-[4rem] text-white">
-                {BaseInfo.position}
-              </h2>
-            </AnimateIn>
-            <AnimateIn animation="fade" direction="left" delay={0.15}>
-              <p className="mt-2 text-lg md:text-xl lg:text-2xl text-accent-purple-light font-medium">
-                {BaseInfo.tagline}
+
+            <AnimateIn animation="fade" direction="up" delay={0.08}>
+              <p className="text-gray-500 dark:text-gray-400 text-base md:text-lg mb-5">
+                AI systems engineer based in Tempe, AZ 📍
               </p>
             </AnimateIn>
-            <AnimateIn animation="fade" direction="left" delay={0.25}>
-              <p className="mt-6 text-sm md:text-base lg:text-lg text-gray-600 dark:text-gray-400 leading-relaxed max-w-xl">
-                {BaseInfo.description}
+
+            <AnimateIn animation="fade" direction="up" delay={0.14}>
+              <p className="text-gray-700 dark:text-gray-300 text-base md:text-lg leading-relaxed mb-3 max-w-lg">
+                I build AI pipelines and full-stack applications that go from research to production.
+              </p>
+              <p className="text-gray-700 dark:text-gray-300 text-base md:text-lg leading-relaxed mb-8 max-w-lg">
+                IEEE COMPSAC 2025 published author · MS Software Engineering, ASU.
               </p>
             </AnimateIn>
-            <AnimateIn animation="zoom" delay={0.35}>
-              <a href="/Rajesh_Sawant_Resume.pdf" download>
-                <button className="md:px-8 md:py-2.5 px-6 py-1.5 text-white font-semibold text-sm md:text-lg transition-all duration-200 rounded-lg mt-8 bg-blue-700 hover:bg-blue-900 flex items-center space-x-2 cursor-pointer">
-                  <span>Download Resume</span>
-                  <FaDownload />
-                </button>
-              </a>
+
+            <AnimateIn animation="fade" direction="up" delay={0.2}>
+              <div className="flex items-center gap-4 flex-wrap">
+                <a href="/Rajesh_Sawant_Resume.pdf" download>
+                  <button className="flex items-center gap-2 px-5 py-2.5 border border-gray-300 dark:border-gray-600 hover:border-accent-purple dark:hover:border-accent-purple text-gray-900 dark:text-white font-semibold text-sm rounded-lg transition-colors duration-200 cursor-pointer">
+                    Resume <FaDownload className="text-xs" />
+                  </button>
+                </a>
+                <div className="flex items-center gap-4">
+                  <a
+                    href="https://www.linkedin.com/in/rajeshsawant98/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-gray-400 hover:text-accent-purple-light transition-colors duration-200"
+                    aria-label="LinkedIn"
+                  >
+                    <FaLinkedin className="text-2xl" />
+                  </a>
+                  <a
+                    href="https://github.com/rajeshsawant98"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-gray-400 hover:text-accent-purple-light transition-colors duration-200"
+                    aria-label="GitHub"
+                  >
+                    <FaGithub className="text-2xl" />
+                  </a>
+                  <a
+                    href={`mailto:${contactData.email}`}
+                    className="text-gray-400 hover:text-accent-purple-light transition-colors duration-200"
+                    aria-label="Email"
+                  >
+                    <FaEnvelope className="text-2xl" />
+                  </a>
+                </div>
+              </div>
             </AnimateIn>
           </div>
-          <div className="mx-auto hidden lg:block overflow-x-hidden">
-            <AnimateIn animation="zoom" delay={0.4}>
-              <Image
-                src={BaseInfo.profilePic}
-                alt={BaseInfo.name}
-                width={500}
-                height={500}
-                priority
-                sizes="(max-width: 1024px) 0vw, 50vw"
-              />
-            </AnimateIn>
-          </div>
+
+          {/* Right: swipeable photo stack */}
+          <AnimateIn animation="zoom" delay={0.1}>
+            <div className="hidden lg:flex flex-shrink-0 items-center justify-center pb-8">
+              <HeroPhotoStack images={BaseInfo.heroImages} />
+            </div>
+          </AnimateIn>
+
         </div>
       </div>
     </section>

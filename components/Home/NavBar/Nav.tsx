@@ -33,7 +33,7 @@ const Nav = ({ openNav }: Props) => {
       <nav
         className={`fixed ${
           navBg ? "bg-nav-bg" : ""
-        } h-[10vh] z-10 w-full transition-all duration-200`}
+        } h-[10vh] z-50 w-full transition-all duration-200`}
       >
         <div className="text-gray-900 dark:text-white text-2xl font-bold flex items-center justify-between h-full w-[95%] sm:w-[90%] xl:w-[82.5%] mx-auto">
           <a href="#home">
