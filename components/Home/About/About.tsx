@@ -7,7 +7,7 @@ const About = () => {
   return (
     <section id="about" className="pt-16 pb-16 bg-primary-bg">
       <SectionHeading>About Me</SectionHeading>
-      <div className="w-[80%] mx-auto mt-20 max-w-4xl">
+      <div className="w-[85%] mx-auto mt-20 max-w-5xl">
         <AnimateIn animation="fade" direction="left">
           <h2 className="text-bg text-[26px] sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-200">
             {aboutInfo.title}

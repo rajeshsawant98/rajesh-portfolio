@@ -5,7 +5,7 @@ import { FaFileAlt } from "react-icons/fa";
 const Research = () => {
   return (
     <section id="research" className="py-20 bg-primary-bg">
-      <div className="w-[85%] mx-auto max-w-4xl">
+      <div className="w-[85%] mx-auto max-w-5xl">
         <p className="text-accent-purple-light text-xs font-semibold tracking-[0.25em] uppercase mb-3">
           Research
         </p>

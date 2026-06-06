@@ -37,7 +37,7 @@ const Experience = () => {
 
   return (
     <section id="experience" className="py-20 bg-primary-bg">
-      <div className="w-[85%] mx-auto max-w-4xl">
+      <div className="w-[85%] mx-auto max-w-5xl">
         <h2 className="text-2xl sm:text-3xl font-extrabold mb-8">
           Background
         </h2>

@@ -6,7 +6,7 @@ const Architecture = () => {
   return (
     <section id="architecture" className="py-16 bg-primary-bg">
       <SectionHeading>Architecture Philosophy</SectionHeading>
-      <div className="w-[80%] mx-auto mt-20 max-w-5xl grid grid-cols-1 md:grid-cols-2 gap-8">
+      <div className="w-[85%] mx-auto mt-20 max-w-5xl grid grid-cols-1 md:grid-cols-2 gap-8">
         {architecturePhilosophy.map((item, i) => (
           <AnimateIn key={item.title} animation="fade" direction="up" delay={i * 0.08}>
             <div className="bg-card-dark rounded-xl p-6 border border-gray-200 dark:border-gray-800 h-full">
