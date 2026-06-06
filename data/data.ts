@@ -19,8 +19,8 @@ export const BaseInfo = {
   profilePic: "/images/Hero.jpeg",
 
   heroImages: [
-    "/images/stack/1.jpg",
-    "/images/stack/2.jpg",
+    "/images/stack/1a.jpg",
+    "/images/stack/2a.jpg",
     "/images/stack/3.jpg",
     "/images/stack/4.jpg",
     "/images/stack/5.jpg",
