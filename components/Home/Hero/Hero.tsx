@@ -44,7 +44,7 @@ const Hero = () => {
                 </a>
                 <div className="flex items-center gap-4">
                   <a
-                    href="https://www.linkedin.com/in/rajeshsawant98/"
+                    href="https://www.linkedin.com/in/rajesh-sawant11/"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-gray-400 hover:text-accent-purple-light transition-colors duration-200"
