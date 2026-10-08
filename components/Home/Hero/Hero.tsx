@@ -21,8 +21,9 @@ const Hero = () => {
             </AnimateIn>
 
             <AnimateIn animation="fade" direction="up" delay={0.08}>
-              <p className="text-gray-500 dark:text-gray-400 text-base md:text-lg mb-5">
-                AI systems engineer based in Tempe, AZ 📍
+              <p className="text-accent-purple-light font-semibold text-base md:text-lg mb-5">
+                {BaseInfo.position} — {BaseInfo.specialty}
+                <span className="text-gray-500 dark:text-gray-400 font-normal"> · Tempe, AZ</span>
               </p>
             </AnimateIn>
 
@@ -30,17 +31,32 @@ const Hero = () => {
               <p className="text-gray-700 dark:text-gray-300 text-base md:text-lg leading-relaxed mb-3 max-w-lg">
                 I build AI pipelines and full-stack applications that go from research to production.
               </p>
-              <p className="text-gray-700 dark:text-gray-300 text-base md:text-lg leading-relaxed mb-8 max-w-lg">
-                IEEE COMPSAC 2025 published author · MS Software Engineering, ASU.
-              </p>
+              <ul className="flex flex-wrap gap-2 mb-8 max-w-lg">
+                {BaseInfo.proofPoints.map((point) => (
+                  <li
+                    key={point}
+                    className="text-xs sm:text-sm font-medium px-3 py-1 rounded-full border border-gray-300 dark:border-gray-700 text-gray-700 dark:text-gray-300"
+                  >
+                    {point}
+                  </li>
+                ))}
+              </ul>
             </AnimateIn>
 
             <AnimateIn animation="fade" direction="up" delay={0.2}>
               <div className="flex items-center gap-4 flex-wrap">
-                <a href="/Rajesh_Sawant_Resume.pdf" download>
-                  <button className="flex items-center gap-2 px-5 py-2.5 border border-gray-300 dark:border-gray-600 hover:border-accent-purple dark:hover:border-accent-purple text-gray-900 dark:text-white font-semibold text-sm rounded-lg transition-colors duration-200 cursor-pointer">
-                    Resume <FaDownload className="text-xs" />
-                  </button>
+                <a
+                  href="#projects"
+                  className="px-5 py-2.5 bg-accent-purple hover:bg-accent-purple-hover text-white font-semibold text-sm rounded-lg transition-colors duration-200"
+                >
+                  View Projects
+                </a>
+                <a
+                  href="/Rajesh_Sawant_Resume.pdf"
+                  download
+                  className="flex items-center gap-2 px-5 py-2.5 border border-gray-300 dark:border-gray-600 hover:border-accent-purple dark:hover:border-accent-purple text-gray-900 dark:text-white font-semibold text-sm rounded-lg transition-colors duration-200"
+                >
+                  Resume <FaDownload className="text-xs" />
                 </a>
                 <div className="flex items-center gap-4">
                   <a

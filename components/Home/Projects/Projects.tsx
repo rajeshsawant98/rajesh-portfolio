@@ -1,8 +1,10 @@
 import AnimateIn from "@/components/Helper/AnimateIn";
 import { projectData } from "@/data/data";
 import Link from "next/link";
-import { FaExternalLinkAlt, FaGithub } from "react-icons/fa";
+import { FaArrowRight, FaExternalLinkAlt, FaGithub } from "react-icons/fa";
 import ProjectImageCarousel from "./ProjectImageCarousel";
+
+const MAX_TAGS = 6;
 
 const Projects = () => {
   return (
@@ -37,41 +39,31 @@ const Projects = () => {
                       {project.badge}
                     </span>
                   )}
-
-                  {/* Links top-right */}
-                  <div className="absolute top-3 right-3 flex gap-2 z-10">
-                    {project.url && (
-                      <Link
-                        href={project.url}
-                        target="_blank"
-                        className="bg-black/50 backdrop-blur-sm border border-white/20 text-white/80 hover:text-white p-1.5 rounded transition-colors"
-                      >
-                        <FaExternalLinkAlt className="text-xs" />
-                      </Link>
-                    )}
-                    {project.githubLink && (
-                      <Link
-                        href={project.githubLink}
-                        target="_blank"
-                        className="bg-black/50 backdrop-blur-sm border border-white/20 text-white/80 hover:text-white p-1.5 rounded transition-colors"
-                      >
-                        <FaGithub className="text-sm" />
-                      </Link>
-                    )}
-                  </div>
                 </div>
 
-                {/* Card body */}
+                {/* Card body: role, results, stack. Full write-up lives on the case study page. */}
                 <div className="p-5 flex flex-col flex-1">
-                  <h3 className="text-base font-bold mb-0.5">{project.title}</h3>
-                  <p className="text-accent-purple-light text-xs font-medium mb-3">
-                    {project.subtitle}
+                  <h3 className="text-base font-bold mb-0.5">
+                    <Link href={`/projects/${project.slug}`} className="hover:text-accent-purple-light transition-colors">
+                      {project.title}
+                    </Link>
+                  </h3>
+                  <p className="text-accent-purple-light text-xs font-medium">{project.subtitle}</p>
+                  <p className="text-gray-500 dark:text-gray-400 text-xs mt-1 mb-4">
+                    {[project.period, project.role].filter(Boolean).join(" · ")}
                   </p>
-                  <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed mb-4 flex-1">
-                    {project.description}
-                  </p>
-                  <div className="flex flex-wrap gap-1.5">
-                    {project.techStack.map((tech) => (
+
+                  <ul className="space-y-2 mb-4 flex-1">
+                    {project.highlights.map((h) => (
+                      <li key={h} className="flex items-start gap-2 text-sm leading-relaxed text-gray-700 dark:text-gray-300">
+                        <span className="text-accent-purple mt-0.5 flex-shrink-0">›</span>
+                        {h}
+                      </li>
+                    ))}
+                  </ul>
+
+                  <div className="flex flex-wrap gap-1.5 mb-5">
+                    {project.techStack.slice(0, MAX_TAGS).map((tech) => (
                       <span
                         key={tech}
                         className="bg-accent-purple/10 border border-accent-purple/20 text-accent-purple-light text-xs px-2.5 py-0.5 rounded-full"
@@ -79,6 +71,40 @@ const Projects = () => {
                         {tech}
                       </span>
                     ))}
+                    {project.techStack.length > MAX_TAGS && (
+                      <span className="text-gray-500 dark:text-gray-400 text-xs px-1 py-0.5">
+                        +{project.techStack.length - MAX_TAGS} more
+                      </span>
+                    )}
+                  </div>
+
+                  <div className="flex flex-wrap items-center gap-4 text-sm font-semibold">
+                    <Link
+                      href={`/projects/${project.slug}`}
+                      className="flex items-center gap-2 text-accent-purple-light hover:text-accent-purple transition-colors"
+                    >
+                      Case study <FaArrowRight className="text-xs" />
+                    </Link>
+                    {project.url && project.url !== project.githubLink && (
+                      <a
+                        href={project.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center gap-1.5 text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors"
+                      >
+                        <FaExternalLinkAlt className="text-xs" /> Live
+                      </a>
+                    )}
+                    {project.githubLink && (
+                      <a
+                        href={project.githubLink}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center gap-1.5 text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors"
+                      >
+                        <FaGithub /> Code
+                      </a>
+                    )}
                   </div>
                 </div>
               </div>

@@ -1,9 +1,14 @@
 export const BaseInfo = {
   name: "Rajesh Sawant",
 
-  position: "AI Systems Engineer",
+  position: "Software Engineer",
+
+  specialty: "AI Systems & Full Stack",
 
   tagline: "Building AI systems that ship to production",
+
+  // Credibility strip under the hero headline
+  proofPoints: ["55K+ manufacturer sites processed", "IEEE COMPSAC 2025 author", "3+ years in industry", "MS Software Engineering, ASU"],
 
   availabilityBadge: "Available for opportunities",
 
@@ -107,6 +112,14 @@ export const educationData = [
 export const projectData = [
   {
     id: 1,
+    slug: "sudokn",
+    period: "Jun 2025 – Present",
+    role: "Software Developer, Arizona State University",
+    highlights: [
+      "Queue-driven ETL pipeline over 55,000+ manufacturer websites (S3 → SQS → LLM extraction → MongoDB & GraphDB)",
+      "Onboarding and validation system with role-based access and human overrides, supplying ground truth for extraction",
+      "AI agent on Vercel's AI SDK over the Proto-OKN MCP server that answers questions as filtered map views",
+    ],
     title: "SUDOKN",
     subtitle: "Production AI Data Infrastructure",
     badge: "PRODUCTION",
@@ -151,6 +164,13 @@ export const projectData = [
   },
   {
     id: 2,
+    slug: "kg-itp",
+    period: "2025",
+    highlights: [
+      "Accepted as a full paper at IEEE COMPSAC 2025",
+      "Personalized itineraries from SPARQL queries over a custom travel ontology",
+      "GeoSPARQL spatial reasoning plus structured LLM output for recommendations",
+    ],
     title: "KG-ITP — Knowledge Graph Travel Planner",
     subtitle: "IEEE COMPSAC 2025 — Full Paper Accepted",
     badge: "IEEE COMPSAC 2025",
@@ -161,6 +181,7 @@ export const projectData = [
       "/images/projects/kg-itp/4.jpeg",
     ],
     url: "https://github.com/rajeshsawant98/travel-path",
+    paperUrl: "https://ieeexplore.ieee.org/document/11126548",
     githubLink: "https://github.com/rajeshsawant98/travel-path",
     techStack: [
       "React",
@@ -185,6 +206,13 @@ export const projectData = [
   },
   {
     id: 3,
+    slug: "sahana",
+    period: "Jul 2024 – Present",
+    highlights: [
+      "FastAPI + React platform with Google SSO, JWT access control, and cursor pagination across 12+ endpoints",
+      "Redis caching with tiered TTLs that cut redundant Firestore reads for paginated feeds",
+      "Scheduled Ticketmaster ETL on GCP Cloud Run with GitHub Actions CI/CD for zero-downtime releases",
+    ],
     title: "Sahana — Real-Time Event Platform",
     subtitle: "Full-Stack Production Application",
     badge: "FULL-STACK",
@@ -199,14 +227,17 @@ export const projectData = [
     githubLink: "https://github.com/rajeshsawant98/sahana-backend",
     techStack: [
       "React",
+      "TypeScript",
       "FastAPI",
-      "Firebase",
-      "Google SSO",
+      "Redis",
+      "Firestore",
+      "GCP Cloud Run",
+      "GitHub Actions",
       "Redux Toolkit",
       "Google Maps API",
     ],
     description:
-      "Designed and built a production event platform with Google SSO authentication via Firebase, async FastAPI backend, Redux Toolkit state management with caching strategies, real-time RSVP tracking, and Google Maps integration for location-based event discovery.",
+      "Engineered a full-stack event platform with FastAPI and React/TypeScript: Google SSO, JWT-based access control, cursor-based pagination across 12+ API endpoints, and a Redis caching layer with tiered TTLs that reduced redundant Firestore reads. An automated ETL pipeline triggered by GCP Cloud Scheduler pulls events from the Ticketmaster API for every user city, deduplicates them with a Redis + Firestore strategy, and deploys to Cloud Run through GitHub Actions. A friend-recommendation engine scores users by interest similarity, geodistance decay, and shared event categories.",
     architecturePoints: [
       "Firebase Auth with Google SSO integration",
       "Async FastAPI with structured error handling",
@@ -216,18 +247,51 @@ export const projectData = [
     ],
     featured: true,
   },
+  {
+    id: 4,
+    slug: "hazelai",
+    period: "Jan 2026 – May 2026",
+    role: "Team Lead, 5-member team",
+    highlights: [
+      "Led a 5-member team, owning the agent workflow, backend integration, and evaluation design",
+      "LangGraph agent that turns natural-language questions into executable SPARQL queries",
+      "Read-only execution and forced result limits to contain unsafe LLM-generated queries",
+    ],
+    title: "HazelAI — Agentic Hazard Intelligence",
+    subtitle: "LangGraph Agent over a Hazard Knowledge Graph",
+    badge: "AGENTIC AI",
+    images: [
+      "/images/projects/hazelai/1.png",
+      "/images/projects/hazelai/2.png",
+      "/images/projects/hazelai/3.png",
+      "/images/projects/hazelai/4.png",
+    ],
+    url: "",
+    githubLink: "",
+    techStack: ["LangGraph", "LLM APIs", "SPARQL", "Knowledge Graph", "FastAPI", "Python"],
+    description:
+      "Led a 5-member team delivering an AI-powered hazard intelligence platform for Arizona. A LangGraph agent converts natural-language questions into executable SPARQL queries through context retrieval, query generation, execution feedback, and answer synthesis, backed by FastAPI services that add validation, retries, read-only execution, and forced result limits to contain unsafe LLM-generated queries.",
+    architecturePoints: [
+      "LangGraph agent: context retrieval → SPARQL generation → execution feedback → answer synthesis",
+      "FastAPI services for query orchestration, validation, retry handling, and response generation",
+      "Read-only execution controls and forced result limits for LLM-generated queries",
+      "Interactive county hazard map and insight dashboard over the knowledge graph",
+    ],
+    featured: true,
+  },
 ];
 
+// Only technologies backed by the resume / project work. Six per group so the grid stays even.
 export const skillsGroups = [
   {
     category: "Programming Languages",
     skills: [
-      { name: "Java", icon: "/images/skills/java.svg" },
       { name: "Python", icon: "/images/skills/python.svg" },
       { name: "TypeScript", icon: "/images/skills/ts.svg" },
       { name: "JavaScript", icon: "/images/skills/js.svg" },
+      { name: "Java", icon: "/images/skills/java.svg" },
       { name: "SQL", icon: "/images/skills/postgresql.svg" },
-      { name: "MATLAB", icon: "/images/skills/matlab.svg" },
+      { name: "C++", icon: "/images/skills/cplusplus.svg" },
     ],
   },
   {
@@ -237,7 +301,7 @@ export const skillsGroups = [
       { name: "Next.js", icon: "/images/skills/nextjs.svg", darkIcon: true },
       { name: "Redux Toolkit", icon: "/images/skills/redux.svg" },
       { name: "Tailwind", icon: "/images/skills/tailwind.svg" },
-      { name: "Bootstrap", icon: "/images/skills/bootstrap.svg" },
+      { name: "shadcn/ui", icon: "/images/skills/shadcnui.svg", darkIcon: true },
       { name: "HTML/CSS", icon: "/images/skills/html.svg" },
     ],
   },
@@ -247,20 +311,31 @@ export const skillsGroups = [
       { name: "FastAPI", icon: "/images/skills/fastapi.svg" },
       { name: "Node.js", icon: "/images/skills/node.svg" },
       { name: "Spring Boot", icon: "/images/skills/spring.svg" },
-      { name: "Prisma", icon: "/images/skills/prisma.svg", darkIcon: true },
       { name: "Firebase", icon: "/images/skills/firebase.svg" },
+      { name: "Postman", icon: "/images/skills/postman.svg" },
       { name: "n8n", icon: "/images/skills/n8n.svg", darkIcon: true },
     ],
   },
   {
-    category: "AI / ML",
+    category: "AI & LLMs",
     skills: [
-      { name: "OpenAI", icon: "/images/skills/openai.svg", darkIcon: true },
-      { name: "Jupyter", icon: "/images/skills/jupyter.svg" },
+      { name: "OpenAI API", icon: "/images/skills/openai.svg", darkIcon: true },
+      { name: "LangChain", icon: "/images/skills/langchain.svg", darkIcon: true },
+      { name: "LangGraph", icon: "/images/skills/langgraph.svg" },
+      { name: "MCP", icon: "/images/skills/mcp.svg", darkIcon: true },
+      { name: "RAG", icon: "/images/skills/rag.svg" },
+      { name: "Pinecone", icon: "/images/skills/pinecone.svg", darkIcon: true },
+    ],
+  },
+  {
+    category: "Machine Learning",
+    skills: [
+      { name: "scikit-learn", icon: "/images/skills/scikitlearn.svg" },
+      { name: "TensorFlow", icon: "/images/skills/tensorflow.svg" },
       { name: "Pandas", icon: "/images/skills/pandas.svg" },
       { name: "NumPy", icon: "/images/skills/numpy.svg" },
-      { name: "scikit-learn", icon: "/images/skills/scikitlearn.svg" },
-      { name: "MATLAB", icon: "/images/skills/matlab.svg" },
+      { name: "FAISS", icon: "/images/skills/faiss.svg" },
+      { name: "Jupyter", icon: "/images/skills/jupyter.svg" },
     ],
   },
   {
@@ -269,31 +344,20 @@ export const skillsGroups = [
       { name: "PostgreSQL", icon: "/images/skills/postgresql.svg" },
       { name: "MongoDB", icon: "/images/skills/mongo.svg" },
       { name: "MySQL", icon: "/images/skills/mysql.svg" },
-      { name: "DynamoDB", icon: "/images/skills/dynamodb.svg", darkIcon: true },
+      { name: "Redis", icon: "/images/skills/redis.svg" },
       { name: "Neo4j", icon: "/images/skills/neo4j.svg" },
-      { name: "Firestore", icon: "/images/skills/firebase.svg" },
+      { name: "GraphDB", icon: "/images/skills/graphdb.svg" },
     ],
   },
   {
-    category: "Cloud",
+    category: "Cloud & DevOps",
     skills: [
       { name: "AWS", icon: "/images/skills/aws.svg" },
       { name: "Google Cloud", icon: "/images/skills/googlecloud.svg" },
       { name: "Azure", icon: "/images/skills/azure.svg" },
       { name: "Docker", icon: "/images/skills/docker.svg" },
-      { name: "Kubernetes", icon: "/images/skills/kubernetes.svg" },
-      { name: "Terraform", icon: "/images/skills/terraform.svg" },
-    ],
-  },
-  {
-    category: "DevOps & Tools",
-    skills: [
-      { name: "Git", icon: "/images/skills/git.svg" },
       { name: "GitHub Actions", icon: "/images/skills/github.svg", darkIcon: true },
-      { name: "Postman", icon: "/images/skills/postman.svg" },
-      { name: "Figma", icon: "/images/skills/figma.svg" },
-      { name: "Jira", icon: "/images/skills/jira.svg" },
-      { name: "Vercel", icon: "/images/skills/vercel.svg", darkIcon: true },
+      { name: "Git", icon: "/images/skills/git.svg" },
     ],
   },
 ];
@@ -304,6 +368,7 @@ export const researchData = [
     title: "Knowledge Graph-Driven Intelligent Travel Planner",
     venue: "IEEE COMPSAC 2025",
     type: "Full Paper — Accepted",
+    url: "https://ieeexplore.ieee.org/document/11126548",
     description:
       "Presented a novel approach to personalized travel planning using knowledge graphs, SPARQL reasoning, GeoSPARQL spatial queries, and structured LLM outputs for generating context-aware itineraries.",
     topics: [

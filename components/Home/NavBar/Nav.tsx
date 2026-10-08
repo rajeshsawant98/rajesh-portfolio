@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useRef } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { navLinks } from "@/constant/constant";
 import { HiBars3BottomRight } from "react-icons/hi2";
 import ThemeToggle from "./ThemeToggle";
@@ -36,7 +37,7 @@ const Nav = ({ openNav }: Props) => {
         } h-[10vh] z-50 w-full transition-all duration-200`}
       >
         <div className="text-gray-900 dark:text-white text-2xl font-bold flex items-center justify-between h-full w-[95%] sm:w-[90%] xl:w-[82.5%] mx-auto">
-          <a href="#home">
+          <Link href="/#home">
             <Image
               src="/images/logo.png"
               alt="Logo"
@@ -45,7 +46,7 @@ const Nav = ({ openNav }: Props) => {
               className="ml-[-1.5rem] sm:ml-0 cursor-pointer"
               priority
             />
-          </a>
+          </Link>
           <div className="flex items-center space-x-10">
             <div className="hidden lg:flex items-center space-x-8">
               {navLinks.map((link) => (

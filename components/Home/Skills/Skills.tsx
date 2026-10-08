@@ -20,7 +20,7 @@ const Skills = () => {
                 <h3 className="text-accent-purple-light font-semibold text-xs uppercase tracking-[0.2em] mb-5">
                   {group.category}
                 </h3>
-                <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-3">
+                <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3">
                   {group.skills.map((skill, si) => (
                     <AnimateIn key={skill.name} animation="flip" delay={gi * 0.05 + si * 0.08}>
                       <SkillCard

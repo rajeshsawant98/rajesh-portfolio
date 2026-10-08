@@ -1,6 +1,6 @@
 import AnimateIn from "@/components/Helper/AnimateIn";
 import { researchData } from "@/data/data";
-import { FaFileAlt } from "react-icons/fa";
+import { FaFileAlt, FaExternalLinkAlt } from "react-icons/fa";
 
 const Research = () => {
   return (
@@ -40,6 +40,16 @@ const Research = () => {
                       </span>
                     ))}
                   </div>
+                  {paper.url && (
+                    <a
+                      href={paper.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="mt-5 inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-accent-purple hover:bg-accent-purple-hover text-white text-sm font-semibold transition-colors"
+                    >
+                      Read on IEEE Xplore <FaExternalLinkAlt className="text-xs" />
+                    </a>
+                  )}
                 </div>
               </div>
             </AnimateIn>

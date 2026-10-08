@@ -79,8 +79,11 @@ const ContactForm = () => {
       <form onSubmit={handleSubmit(onSubmit)} className="mt-8 block w-full overflow-hidden">
         <div className="flex flex-col md:flex-row items-start justify-between gap-4">
           <div className="flex-1 w-full">
+            <label htmlFor="firstName" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1.5">First name</label>
             <input
+              id="firstName"
               {...register("firstName")}
+              autoComplete="given-name"
               type="text"
               placeholder="First Name"
               className={inputClasses}
@@ -90,8 +93,11 @@ const ContactForm = () => {
             )}
           </div>
           <div className="flex-1 w-full">
+            <label htmlFor="lastName" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1.5">Last name</label>
             <input
+              id="lastName"
               {...register("lastName")}
+              autoComplete="family-name"
               type="text"
               placeholder="Last Name"
               className={inputClasses}
@@ -103,8 +109,11 @@ const ContactForm = () => {
         </div>
         <div className="flex mt-5 flex-col md:flex-row items-start justify-between gap-4">
           <div className="flex-1 w-full">
+            <label htmlFor="email" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1.5">Email</label>
             <input
+              id="email"
               {...register("email")}
+              autoComplete="email"
               type="email"
               placeholder="Email"
               className={inputClasses}
@@ -114,8 +123,11 @@ const ContactForm = () => {
             )}
           </div>
           <div className="flex-1 w-full">
+            <label htmlFor="phone" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1.5">Phone (optional)</label>
             <input
+              id="phone"
               {...register("phone")}
+              autoComplete="tel"
               type="text"
               placeholder="Phone Number"
               className={inputClasses}
@@ -123,7 +135,9 @@ const ContactForm = () => {
           </div>
         </div>
         <div className="mt-5">
+          <label htmlFor="message" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1.5">Message</label>
           <textarea
+            id="message"
             {...register("message")}
             rows={7}
             placeholder="Message"
