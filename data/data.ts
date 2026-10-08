@@ -8,7 +8,7 @@ export const BaseInfo = {
   tagline: "Building AI systems that ship to production",
 
   // Credibility strip under the hero headline
-  proofPoints: ["55K+ manufacturer sites processed", "IEEE COMPSAC 2025 author", "3+ years in industry", "MS Software Engineering, ASU"],
+  proofPoints: ["55K+ manufacturer sites processed", "Published at IEEE COMPSAC 2025", "3+ years in industry", "MS Software Engineering, ASU"],
 
   availabilityBadge: "Available for opportunities",
 
@@ -42,7 +42,7 @@ export const aboutInfo = {
     "Designed distributed pipeline: S3 → SQS → LLM extraction → MongoDB & GraphDB",
     "Built modern Next.js frontends with Mapbox, Zustand, and performance-focused state isolation",
     "Developed async FastAPI backends with authentication, caching, and modular service layers",
-    "Published IEEE COMPSAC 2025 research on knowledge graph–driven personalization",
+    "Published at IEEE COMPSAC 2025: knowledge graph–driven personalization research",
   ],
 };
 
@@ -92,7 +92,7 @@ export const educationData = [
     highlights: [
       "GPA: 3.76 / 4.0",
       "Teaching Assistant — AI for Software Engineers (Spring 2026)",
-      "Published IEEE COMPSAC 2025 research on knowledge graph–driven personalization",
+      "Published at IEEE COMPSAC 2025: knowledge graph–driven personalization research",
     ],
   },
   {
@@ -167,12 +167,12 @@ export const projectData = [
     slug: "kg-itp",
     period: "2025",
     highlights: [
-      "Accepted as a full paper at IEEE COMPSAC 2025",
+      "Published at IEEE COMPSAC 2025 as a full paper",
       "Personalized itineraries from SPARQL queries over a custom travel ontology",
       "GeoSPARQL spatial reasoning plus structured LLM output for recommendations",
     ],
     title: "KG-ITP — Knowledge Graph Travel Planner",
-    subtitle: "IEEE COMPSAC 2025 — Full Paper Accepted",
+    subtitle: "Published at IEEE COMPSAC 2025 — Full Paper",
     badge: "IEEE COMPSAC 2025",
     images: [
       "/images/projects/kg-itp/1.jpeg",
@@ -194,7 +194,7 @@ export const projectData = [
       "LLM",
     ],
     description:
-      "Built a knowledge graph-driven intelligent travel planner that generates personalized itineraries using SPARQL queries over custom ontologies, GeoSPARQL for spatial reasoning, and structured LLM output for natural language recommendations. Accepted as a full paper at IEEE COMPSAC 2025.",
+      "Built a knowledge graph-driven intelligent travel planner that generates personalized itineraries using SPARQL queries over custom ontologies, GeoSPARQL for spatial reasoning, and structured LLM output for natural language recommendations. Published at IEEE COMPSAC 2025 as a full paper.",
     architecturePoints: [
       "Custom travel ontology designed in Protégé",
       "SPARQL + GeoSPARQL for spatial query reasoning",
@@ -366,8 +366,8 @@ export const researchData = [
   {
     id: 1,
     title: "Knowledge Graph-Driven Intelligent Travel Planner",
-    venue: "IEEE COMPSAC 2025",
-    type: "Full Paper — Accepted",
+    venue: "Published at IEEE COMPSAC 2025",
+    type: "Full Paper",
     url: "https://ieeexplore.ieee.org/document/11126548",
     description:
       "Presented a novel approach to personalized travel planning using knowledge graphs, SPARQL reasoning, GeoSPARQL spatial queries, and structured LLM outputs for generating context-aware itineraries.",
