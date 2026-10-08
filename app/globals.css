@@ -8,8 +8,13 @@
   --color-primary-bg-alt: var(--theme-primary-bg-alt);
   --color-card-dark: var(--theme-card-dark);
   --color-nav-bg: var(--theme-nav-bg);
-  --color-accent-purple: #7947df;
-  --color-accent-purple-hover: #5c2fb7;
+  --color-accent-purple: #7a4f9a; /* D2 legendary purple */
+  --color-accent-purple-hover: #522f65;
+  /* D2 UI is all hard edges */
+  --radius-sm: 0px;
+  --radius-md: 0px;
+  --radius-lg: 0px;
+  --radius-xl: 0px;
   --color-accent-purple-light: var(--theme-accent-purple-light);
   --color-accent-purple-gradient-start: #8050f7;
 }
@@ -24,14 +29,14 @@
   --theme-accent-purple-light: #7947df;
 }
 
-/* Dark mode */
+/* Dark mode (forced): section backgrounds go transparent so the D2 backdrop shows through */
 .dark {
-  --theme-primary-dark: #0f0715;
-  --theme-primary-bg: #050709;
-  --theme-primary-bg-alt: #050715;
-  --theme-card-dark: #140c1c;
-  --theme-nav-bg: #240b39;
-  --theme-accent-purple-light: #c277fa;
+  --theme-primary-dark: transparent;
+  --theme-primary-bg: transparent;
+  --theme-primary-bg-alt: transparent;
+  --theme-card-dark: rgba(14, 18, 26, 0.72);
+  --theme-nav-bg: #0b0e14;
+  --theme-accent-purple-light: #e8d36a; /* exotic gold */
 }
 
 html {
@@ -62,7 +67,8 @@ html {
 
 @layer base {
   body {
-    @apply bg-primary-bg-alt text-gray-900 dark:text-white;
+    @apply text-gray-900 dark:text-white;
+    background: #07090d;
     scrollbar-width: thin;
     scrollbar-color: var(--color-accent-purple-light) #44028f;
   }
@@ -87,5 +93,124 @@ html {
 
   p {
     @apply text-gray-700 dark:text-gray-300;
+  }
+}
+
+/* ---------- Destiny 2 director menu ---------- */
+
+.d2-bg {
+  background: #07090d;
+  isolation: isolate;
+}
+.d2-bg::before,
+.d2-bg::after {
+  content: "";
+  position: absolute;
+  inset: -20%;
+  z-index: -1;
+  pointer-events: none;
+}
+/* Drifting nebula */
+.d2-bg::before {
+  background:
+    radial-gradient(40% 35% at 20% 25%, rgba(56, 120, 160, 0.28), transparent 70%),
+    radial-gradient(35% 30% at 80% 75%, rgba(122, 79, 154, 0.3), transparent 70%),
+    radial-gradient(30% 25% at 70% 15%, rgba(232, 211, 106, 0.08), transparent 70%);
+  animation: d2-drift 40s ease-in-out infinite alternate;
+}
+/* Star field + vignette */
+.d2-bg::after {
+  inset: 0;
+  background:
+    radial-gradient(ellipse at center, transparent 40%, rgba(0, 0, 0, 0.75) 100%),
+    radial-gradient(1px 1px at 10% 20%, #fff8, transparent),
+    radial-gradient(1px 1px at 30% 70%, #fff6, transparent),
+    radial-gradient(1px 1px at 55% 35%, #fff7, transparent),
+    radial-gradient(1px 1px at 75% 60%, #fff5, transparent),
+    radial-gradient(1px 1px at 90% 15%, #fff8, transparent),
+    radial-gradient(1px 1px at 45% 90%, #fff5, transparent);
+  animation: d2-twinkle 6s ease-in-out infinite alternate;
+}
+@keyframes d2-drift {
+  to { transform: translate(4%, -3%) scale(1.08) rotate(3deg); }
+}
+@keyframes d2-twinkle {
+  to { opacity: 0.6; }
+}
+
+/* Keyboard / controller prompt */
+.d2-key {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 22px;
+  height: 22px;
+  padding: 0 5px;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 700;
+  color: #fff;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+/* Inventory-tile hover: white frame + glow, like hovering an item in D2 */
+.d2-tile {
+  position: relative;
+  transition: border-color 0.15s, box-shadow 0.15s, transform 0.15s;
+}
+.d2-tile:hover {
+  border-color: #fff !important;
+  box-shadow: 0 0 0 1px #fff, 0 0 18px rgba(255, 255, 255, 0.25);
+}
+
+/* Equipped subclass glow, color from --glow */
+.d2-pulse { animation: d2-pulse 2.4s ease-in-out infinite; }
+@keyframes d2-pulse {
+  0%, 100% { box-shadow: 0 0 10px var(--glow); }
+  50% { box-shadow: 0 0 26px var(--glow), 0 0 4px #fff; }
+}
+
+/* Item tooltip header bands by rarity */
+.d2-exotic { background: linear-gradient(90deg, #ceae33, #8f7a26); }
+.d2-legendary { background: linear-gradient(90deg, #6b3d84, #3c2148); }
+.d2-rare { background: linear-gradient(90deg, #5076a3, #2c4562); }
+
+.no-scrollbar { scrollbar-width: none; }
+.no-scrollbar::-webkit-scrollbar { display: none; }
+.d2-scroll {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 255, 255, 0.3) transparent;
+}
+
+/* Contact: emblem banners + transmission signal */
+.d2-emblem-banner::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0 2px, transparent 2px 10px);
+  pointer-events: none;
+}
+.d2-shine {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(100deg, transparent 30%, rgba(255, 255, 255, 0.25) 50%, transparent 70%);
+  transform: translateX(-100%);
+  pointer-events: none;
+}
+.d2-emblem-banner:hover .d2-shine {
+  transform: translateX(100%);
+  transition: transform 0.6s ease;
+}
+.d2-signal { animation: d2-signal 1.2s ease-in-out infinite alternate; }
+@keyframes d2-signal {
+  from { opacity: 0.35; }
+  to { opacity: 1; }
+}
+
+/* Tab bar: fade the edges so it reads as horizontally scrollable on narrow screens */
+@media (max-width: 1023px) {
+  .d2-tabfade {
+    mask-image: linear-gradient(90deg, transparent 0, #000 16px, #000 calc(100% - 28px), transparent 100%);
   }
 }

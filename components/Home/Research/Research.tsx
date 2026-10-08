@@ -1,10 +1,10 @@
 import AnimateIn from "@/components/Helper/AnimateIn";
 import { researchData } from "@/data/data";
-import { FaFileAlt } from "react-icons/fa";
+import { FaFileAlt, FaExternalLinkAlt } from "react-icons/fa";
 
 const Research = () => {
   return (
-    <section id="research" className="py-20 bg-primary-bg">
+    <section className="py-20 bg-primary-bg">
       <div className="w-[85%] mx-auto max-w-5xl">
         <p className="text-accent-purple-light text-xs font-semibold tracking-[0.25em] uppercase mb-3">
           Research
@@ -16,7 +16,7 @@ const Research = () => {
         <div className="space-y-6">
           {researchData.map((paper, i) => (
             <AnimateIn key={paper.id} animation="fade" direction="up" delay={i * 0.1}>
-              <div className="bg-card-dark border border-accent-purple/25 rounded-xl p-6 md:p-8 flex items-start gap-5">
+              <div className="bg-card-dark border border-accent-purple/25 d2-tile p-6 md:p-8 flex items-start gap-5">
                 <div className="flex-shrink-0 w-11 h-11 bg-accent-purple/10 border border-accent-purple/30 rounded-lg flex items-center justify-center mt-0.5">
                   <FaFileAlt className="text-accent-purple-light text-lg" />
                 </div>
@@ -40,6 +40,16 @@ const Research = () => {
                       </span>
                     ))}
                   </div>
+                  {paper.url && (
+                    <a
+                      href={paper.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="mt-5 inline-flex items-center gap-2 px-4 py-2 border border-white/60 text-white text-xs font-semibold uppercase tracking-[0.2em] hover:bg-white hover:text-black transition-colors"
+                    >
+                      <FaExternalLinkAlt className="text-[10px]" /> Read on IEEE Xplore
+                    </a>
+                  )}
                 </div>
               </div>
             </AnimateIn>

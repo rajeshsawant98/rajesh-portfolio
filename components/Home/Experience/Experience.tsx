@@ -36,7 +36,7 @@ const Experience = () => {
   const [activeTab, setActiveTab] = useState<Tab>("work");
 
   return (
-    <section id="experience" className="py-20 bg-primary-bg">
+    <section className="py-20 bg-primary-bg">
       <div className="w-[85%] mx-auto max-w-5xl">
         <h2 className="text-2xl sm:text-3xl font-extrabold mb-8">
           Background
@@ -67,7 +67,7 @@ const Experience = () => {
                 <div className="flex gap-4 items-start">
                   <OrgLogo logo={exp.logo} initials={exp.initials} />
                   <div className="flex-1 min-w-0 relative pl-4 border-l border-gray-200 dark:border-gray-800">
-                    <div className="absolute -left-[5px] top-[14px] w-[9px] h-[9px] rounded-full bg-accent-purple border-2 border-primary-bg" />
+                    <div className="absolute -left-[5px] top-[14px] w-[9px] h-[9px] rotate-45 bg-accent-purple-light" />
                     <div className="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-0.5 mb-0.5">
                       <h3 className="text-base font-bold">{exp.role}</h3>
                       <span className="text-gray-400 dark:text-gray-600 text-xs flex-shrink-0">{exp.period}</span>
@@ -97,7 +97,7 @@ const Experience = () => {
                 <div className="flex gap-4 items-start">
                   <OrgLogo logo={edu.logo} initials={edu.initials} />
                   <div className="flex-1 min-w-0 relative pl-4 border-l border-gray-200 dark:border-gray-800">
-                    <div className="absolute -left-[5px] top-[14px] w-[9px] h-[9px] rounded-full bg-accent-purple border-2 border-primary-bg" />
+                    <div className="absolute -left-[5px] top-[14px] w-[9px] h-[9px] rotate-45 bg-accent-purple-light" />
                     <div className="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-0.5 mb-0.5">
                       <h3 className="text-base font-bold">{edu.degree}</h3>
                       <span className="text-gray-400 dark:text-gray-600 text-xs flex-shrink-0">{edu.period}</span>

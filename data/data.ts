@@ -1,9 +1,14 @@
 export const BaseInfo = {
   name: "Rajesh Sawant",
 
-  position: "AI Systems Engineer",
+  position: "Software Engineer",
 
-  tagline: "Building AI systems that ship to production",
+  specialty: "AI Systems & Full Stack",
+
+  tagline: "I build production data pipelines, AI agents, and full-stack applications.",
+
+  // Credibility strip under the hero headline
+  proofPoints: ["55K+ sites processed", "IEEE COMPSAC 2025 author", "3+ years in industry"],
 
   availabilityBadge: "Available for opportunities",
 
@@ -107,6 +112,7 @@ export const educationData = [
 export const projectData = [
   {
     id: 1,
+    slug: "sudokn",
     title: "SUDOKN",
     subtitle: "Production AI Data Infrastructure",
     badge: "PRODUCTION",
@@ -151,6 +157,7 @@ export const projectData = [
   },
   {
     id: 2,
+    slug: "kg-itp",
     title: "KG-ITP — Knowledge Graph Travel Planner",
     subtitle: "IEEE COMPSAC 2025 — Full Paper Accepted",
     badge: "IEEE COMPSAC 2025",
@@ -161,6 +168,7 @@ export const projectData = [
       "/images/projects/kg-itp/4.jpeg",
     ],
     url: "https://github.com/rajeshsawant98/travel-path",
+    paperUrl: "https://ieeexplore.ieee.org/document/11126548",
     githubLink: "https://github.com/rajeshsawant98/travel-path",
     techStack: [
       "React",
@@ -185,6 +193,7 @@ export const projectData = [
   },
   {
     id: 3,
+    slug: "sahana",
     title: "Sahana — Real-Time Event Platform",
     subtitle: "Full-Stack Production Application",
     badge: "FULL-STACK",
@@ -213,6 +222,31 @@ export const projectData = [
       "Redux Toolkit with caching and optimistic updates",
       "Google Maps API for geolocation features",
       "Interest-based recommendation engine",
+    ],
+    featured: true,
+  },
+  {
+    id: 4,
+    slug: "hazelai",
+    title: "HazelAI — Agentic Hazard Intelligence",
+    subtitle: "LangGraph Agent over a Hazard Knowledge Graph",
+    badge: "AGENTIC AI",
+    images: [
+      "/images/projects/hazelai/1.png",
+      "/images/projects/hazelai/2.png",
+      "/images/projects/hazelai/3.png",
+      "/images/projects/hazelai/4.png",
+    ],
+    url: "",
+    githubLink: "",
+    techStack: ["LangGraph", "LLM APIs", "SPARQL", "Knowledge Graph", "FastAPI", "Python"],
+    description:
+      "Led a 5-member team delivering an AI-powered hazard intelligence platform for Arizona. A LangGraph agent converts natural-language questions into executable SPARQL queries through context retrieval, query generation, execution feedback, and answer synthesis, backed by FastAPI services that add validation, retries, read-only execution, and forced result limits to contain unsafe LLM-generated queries.",
+    architecturePoints: [
+      "LangGraph agent: context retrieval → SPARQL generation → execution feedback → answer synthesis",
+      "FastAPI services for query orchestration, validation, retry handling, and response generation",
+      "Read-only execution controls and forced result limits for LLM-generated queries",
+      "Interactive county hazard map and insight dashboard over the knowledge graph",
     ],
     featured: true,
   },
@@ -298,12 +332,187 @@ export const skillsGroups = [
   },
 ];
 
+// Detailed skill groups shown on the Overview focus area pages.
+export const focusSkillGroups = [
+  {
+    category: "Programming Languages",
+    skills: [
+      { name: "Java", icon: "/images/skills/java.svg" },
+      { name: "Python", icon: "/images/skills/python.svg" },
+      { name: "TypeScript", icon: "/images/skills/ts.svg" },
+      { name: "JavaScript", icon: "/images/skills/js.svg" },
+      { name: "SQL", icon: "/images/skills/postgresql.svg" },
+      { name: "C++", icon: "/images/skills/cplusplus.svg" },
+      { name: "MATLAB", icon: "/images/skills/matlab.svg" },
+    ],
+  },
+  {
+    category: "Frontend",
+    skills: [
+      { name: "React", icon: "/images/skills/react.svg" },
+      { name: "Next.js", icon: "/images/skills/nextjs.svg", darkIcon: true },
+      { name: "Redux Toolkit", icon: "/images/skills/redux.svg" },
+      { name: "Tailwind", icon: "/images/skills/tailwind.svg" },
+      { name: "shadcn/ui", icon: "/images/skills/shadcnui.svg", darkIcon: true },
+      { name: "Bootstrap", icon: "/images/skills/bootstrap.svg" },
+      { name: "HTML/CSS", icon: "/images/skills/html.svg" },
+    ],
+  },
+  {
+    category: "Backend & APIs",
+    skills: [
+      { name: "FastAPI", icon: "/images/skills/fastapi.svg" },
+      { name: "Node.js", icon: "/images/skills/node.svg" },
+      { name: "Spring Boot", icon: "/images/skills/spring.svg" },
+      { name: "Prisma", icon: "/images/skills/prisma.svg", darkIcon: true },
+      { name: "Firebase", icon: "/images/skills/firebase.svg" },
+      { name: "n8n", icon: "/images/skills/n8n.svg", darkIcon: true },
+    ],
+  },
+  {
+    category: "LLMs & Agents",
+    skills: [
+      { name: "OpenAI API", icon: "/images/skills/openai.svg", darkIcon: true },
+      { name: "Vercel AI SDK", icon: "/images/skills/vercel.svg", darkIcon: true },
+      { name: "LangChain", icon: "/images/skills/langchain.svg", darkIcon: true },
+      { name: "LangGraph", icon: "/images/skills/langgraph.svg", darkIcon: true },
+      { name: "MCP", icon: "/images/skills/mcp.svg", darkIcon: true },
+      { name: "Agentic AI", icon: "/images/skills/agenticai.svg" },
+      { name: "Prompt Engineering", icon: "/images/skills/promptengineering.svg" },
+    ],
+  },
+  {
+    category: "RAG & Vector Search",
+    skills: [
+      { name: "RAG", icon: "/images/skills/rag.svg" },
+      { name: "Pinecone", icon: "/images/skills/pinecone.svg", darkIcon: true },
+      { name: "FAISS", icon: "/images/skills/faiss.svg" },
+    ],
+  },
+  {
+    category: "Knowledge Graphs",
+    skills: [
+      { name: "Ontotext GraphDB", icon: "/images/skills/graphdb.svg" },
+      { name: "RDF", icon: "/images/skills/semanticweb.svg" },
+      { name: "SPARQL", icon: "/images/skills/sparql.svg" },
+      { name: "GeoSPARQL", icon: "/images/skills/geosparql.svg" },
+      { name: "Protégé", icon: "/images/skills/protege.svg" },
+    ],
+  },
+  {
+    category: "ML & Data Science",
+    skills: [
+      { name: "Jupyter", icon: "/images/skills/jupyter.svg" },
+      { name: "Pandas", icon: "/images/skills/pandas.svg" },
+      { name: "NumPy", icon: "/images/skills/numpy.svg" },
+      { name: "scikit-learn", icon: "/images/skills/scikitlearn.svg" },
+      { name: "TensorFlow", icon: "/images/skills/tensorflow.svg" },
+      { name: "MATLAB", icon: "/images/skills/matlab.svg" },
+    ],
+  },
+  {
+    category: "AI Dev Tools",
+    skills: [
+      { name: "Claude Code", icon: "/images/skills/claude.svg" },
+      { name: "Cursor", icon: "/images/skills/cursor.svg", darkIcon: true },
+      { name: "Ollama", icon: "/images/skills/ollama.svg", darkIcon: true },
+    ],
+  },
+  {
+    category: "Databases",
+    skills: [
+      { name: "PostgreSQL", icon: "/images/skills/postgresql.svg" },
+      { name: "MongoDB", icon: "/images/skills/mongo.svg" },
+      { name: "MySQL", icon: "/images/skills/mysql.svg" },
+      { name: "DynamoDB", icon: "/images/skills/dynamodb.svg", darkIcon: true },
+      { name: "Neo4j", icon: "/images/skills/neo4j.svg" },
+      { name: "Firestore", icon: "/images/skills/firebase.svg" },
+      { name: "Redis", icon: "/images/skills/redis.svg" },
+      { name: "Supabase", icon: "/images/skills/supabase.svg" },
+    ],
+  },
+  {
+    category: "Cloud",
+    skills: [
+      { name: "AWS", icon: "/images/skills/aws.svg" },
+      { name: "Google Cloud", icon: "/images/skills/googlecloud.svg" },
+      { name: "Azure", icon: "/images/skills/azure.svg" },
+      { name: "Docker", icon: "/images/skills/docker.svg" },
+      { name: "Kubernetes", icon: "/images/skills/kubernetes.svg" },
+      { name: "Terraform", icon: "/images/skills/terraform.svg" },
+    ],
+  },
+  {
+    category: "DevOps & Tools",
+    skills: [
+      { name: "Git", icon: "/images/skills/git.svg" },
+      { name: "GitHub Actions", icon: "/images/skills/github.svg", darkIcon: true },
+      { name: "Postman", icon: "/images/skills/postman.svg" },
+      { name: "Figma", icon: "/images/skills/figma.svg" },
+      { name: "Jira", icon: "/images/skills/jira.svg" },
+      { name: "Confluence", icon: "/images/skills/confluence.svg" },
+      { name: "Mendix", icon: "/images/skills/mendix.svg" },
+      { name: "Vercel", icon: "/images/skills/vercel.svg", darkIcon: true },
+    ],
+  },
+  {
+    category: "Testing",
+    skills: [
+      { name: "Jest", icon: "/images/skills/jest.svg" },
+      { name: "Playwright", icon: "/images/skills/playwright.svg" },
+      { name: "JUnit", icon: "/images/skills/junit.svg" },
+    ],
+  },
+];
+
+// Overview screen focus areas. `categories` must match focusSkillGroups[].category, `projects` are projectData ids.
+export const focusAreas = [
+  {
+    name: "Full Stack Development",
+    description:
+      "End-to-end product engineering: typed React and Next.js frontends, async Python and Node services, and the data models in between.",
+    categories: ["Programming Languages", "Frontend", "Backend & APIs", "Databases", "Testing"],
+    highlights: [
+      "Built SUDOKN's manufacturer onboarding and validation system end to end with Next.js, FastAPI, MongoDB, and role-based access",
+      "Shipped Sahana: FastAPI + React with Google SSO, JWT access control, cursor pagination across 12+ endpoints, and Redis caching with tiered TTLs",
+      "Built reusable React components and enterprise web apps for manufacturing and automotive clients",
+    ],
+    projects: [1, 3],
+  },
+  {
+    name: "AI Engineering",
+    description:
+      "LLM systems that hold up in production: structured extraction, agents with tool use, and knowledge graphs that ground the output.",
+    categories: ["LLMs & Agents", "RAG & Vector Search", "Knowledge Graphs", "ML & Data Science", "AI Dev Tools"],
+    highlights: [
+      "Real-time and batch LLM extraction with async workers, retries, and controlled concurrency",
+      "AI agent on Vercel's AI SDK orchestrating multi-tool calls through the Proto-OKN MCP server",
+      "Led a 5-person team on HazelAI, a LangGraph agent that turns natural-language questions into safe, executable SPARQL queries",
+      "IEEE COMPSAC 2025 paper on knowledge graph–driven personalized travel planning",
+    ],
+    projects: [1, 4, 2],
+  },
+  {
+    name: "Cloud & DevOps",
+    description:
+      "Infrastructure that keeps data moving: queue-decoupled AWS services, containerized deploys, and CI/CD.",
+    categories: ["Cloud", "DevOps & Tools"],
+    highlights: [
+      "Queue-driven ETL on AWS S3 and SQS processing data from 55,000+ manufacturer websites",
+      "Sahana ETL on GCP Cloud Scheduler and Cloud Run, with GitHub Actions CI/CD for zero-downtime releases",
+      "Deployed enterprise applications on AWS with Docker, Kubernetes, and CI/CD pipelines",
+    ],
+    projects: [1],
+  },
+];
+
 export const researchData = [
   {
     id: 1,
     title: "Knowledge Graph-Driven Intelligent Travel Planner",
     venue: "IEEE COMPSAC 2025",
     type: "Full Paper — Accepted",
+    url: "https://ieeexplore.ieee.org/document/11126548",
     description:
       "Presented a novel approach to personalized travel planning using knowledge graphs, SPARQL reasoning, GeoSPARQL spatial queries, and structured LLM outputs for generating context-aware itineraries.",
     topics: [
@@ -343,5 +552,5 @@ export const architecturePhilosophy = [
 export const contactData = {
   phone: "+1-480-685-0404",
   email: "rajeshsawant98@gmail.com",
-  address: "Tempe, Arizona, USA",
+  address: "Tempe, AZ",
 };

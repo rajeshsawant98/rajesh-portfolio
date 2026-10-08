@@ -1,8 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import ResponsiveNav from "@/components/Home/NavBar/ResponsiveNav";
-import ScrollToTop from "@/components/Helper/ScrollToTop";
 import ThemeProvider from "@/components/ThemeProvider";
 import { GoogleAnalytics } from "@next/third-parties/google";
 import { Analytics } from "@vercel/analytics/next";
@@ -22,10 +20,11 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
-  title: "Rajesh Sawant | AI Systems Engineer",
+  title: "Rajesh Sawant | Software Engineer — AI Systems & Full Stack",
   description:
-    "AI Systems Engineer specializing in knowledge graph architecture, LLM pipelines, and production data infrastructure. MS Software Engineering, ASU. Published at IEEE COMPSAC 2025.",
+    "Software engineer building production data pipelines, AI agents, and full-stack applications. MS Software Engineering, ASU. Published at IEEE COMPSAC 2025.",
   keywords: [
+    "Software Engineer",
     "AI Systems Engineer",
     "Knowledge Graph",
     "LLM Pipeline",
@@ -37,9 +36,9 @@ export const metadata: Metadata = {
     "TypeScript",
   ],
   openGraph: {
-    title: "Rajesh Sawant | AI Systems Engineer",
+    title: "Rajesh Sawant | Software Engineer — AI Systems & Full Stack",
     description:
-      "AI Systems Engineer specializing in knowledge graph architecture, LLM pipelines, and production data infrastructure.",
+      "Software engineer building production data pipelines, AI agents, and full-stack applications.",
     url: siteUrl,
     siteName: "Rajesh Sawant Portfolio",
     type: "website",
@@ -54,9 +53,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Rajesh Sawant | AI Systems Engineer",
+    title: "Rajesh Sawant | Software Engineer — AI Systems & Full Stack",
     description:
-      "AI Systems Engineer specializing in knowledge graph architecture, LLM pipelines, and production data infrastructure.",
+      "Software engineer building production data pipelines, AI agents, and full-stack applications.",
     images: [`${siteUrl}/images/hero.png`],
   },
 };
@@ -72,9 +71,7 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <ThemeProvider>
-          <ResponsiveNav />
           {children}
-          <ScrollToTop />
         </ThemeProvider>
         <Analytics />
       </body>
